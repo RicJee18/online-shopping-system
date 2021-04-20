@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `products` (
 
 
 INSERT INTO `products` (`id`, `name`, `code`, `price`, `image`) VALUES
-(1, 'Samsung Galaxy A12', 'S01', 9990.00, 'product-images/Galaxy A12 9990.webp'),
+(1, 'Samsung Galaxy A12', 'S01', 9990.00, 'product-images/Galaxy A12 9990.png'),
 (2, 'Samsung Galaxy A32', 'S02', 13990.00, 'product-images/Galaxy A32 13990.webp'),
 (3, 'Samsung Galaxy A52 5G', 'S03', 23990.00, 'product-images/Galaxy A52 5G 23990.webp'),
 (4, 'Samsung Galaxy A72', 'S04', 23990.00, 'product-images/Galaxy A72 23990.webp'),
