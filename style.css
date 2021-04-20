@@ -5,32 +5,8 @@
 	margin:0;
 }
 
-html{
-	background-color: #eaf0f2;
-}
-
 body{
 	font:16px/1.6 Arial,  sans-serif;
-}
-
-header{
-	text-align: center;
-	padding-top: 100px;
-	margin-bottom:190px;
-}
-
-header h1{
-	font: normal 32px/1.5 'Open Sans', sans-serif;
-	color: #3F71AE;
-	padding-bottom: 16px;
-}
-
-header h2{
-	color: #F05283;
-}
-
-header span{
-	color: #3F71EA;
 }
 
 
@@ -80,6 +56,7 @@ footer{
 
 .footer-distributed .footer-left img{
 	width: 30%;
+    border-radius: 10%;
 }
 
 .footer-distributed h3 span{
@@ -98,6 +75,9 @@ footer{
 	line-height: 1.8;
 	text-decoration: none;
 	color:  inherit;
+}
+.footer-distributed .footer-links a:hover{
+    background-color:#555;
 }
 
 .footer-distributed .footer-company-name{
@@ -130,6 +110,18 @@ footer{
 .footer-distributed .footer-center i.fa-envelope{
 	font-size: 17px;
 	line-height: 38px;
+}
+.footer-distributed .footer-center i.fa-envelope:hover{
+    background-color:#4CAF50;
+ 
+}
+.footer-distributed .footer-center i.fa-map-marker:hover{
+    background-color: #4CAF50;
+  
+}
+.footer-distributed .footer-center i.fa-phone:hover{
+    background-color: #4CAF50;
+
 }
 
 .footer-distributed .footer-center p{
@@ -193,6 +185,10 @@ footer{
 
 	margin-right: 3px;
 	margin-bottom: 5px;
+}   
+
+.footer-distributed .footer-icons a:hover{
+    background-color: #4CAF50;
 }
 
 /* Here is the code for Responsive Footer */

@@ -17,19 +17,13 @@
 
 </head>
 	<body>
-		<header>
-			<h1> Responsive Footer </h1>
-			<h2>Have a look</h2>
-			<h2><span>On Below Footer</span></h2>
-		</header>
-
 		<!-- The content of your page would go here. -->
 
 		<footer class="footer-distributed">
 
 			<div class="footer-left">
-          <img src="img/logo.png">
-				<h3>About<span>Eduonix</span></h3>
+          <img src= "https://i.fbcd.co/products/original/547651b78f7a86921f176525292a948dd513c0fca05e84b684f6dc7b9264ab1c.jpg">
+				<h3>About<span>MyCompany</span></h3>
 
 				<p class="footer-links">
 					<a href="#">Home</a>
@@ -41,30 +35,29 @@
 					<a href="#">Contact</a>
 				</p>
 
-				<p class="footer-company-name">© 2019 Eduonix Learning Solutions Pvt. Ltd.</p>
+				<p class="footer-company-name">© 2021 RJJ-Online-Shopping.corp</p>
 			</div>
 
 			<div class="footer-center">
 				<div>
 					<i class="fa fa-map-marker"></i>
-					  <p><span>309 - Rupa Solitaire,
-						 Bldg. No. A - 1, Sector - 1</span>
-						Mahape, Navi Mumbai - 400710</p>
+					  <p><span>Samjung Building</span>
+						Nasipit - Road - Talamban</p>
 				</div>
 
 				<div>
 					<i class="fa fa-phone"></i>
-					<p>+91 22-27782183</p>
+					<p>+09 12-3456789</p>
 				</div>
 				<div>
 					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:support@eduonix.com">support@eduonix.com</a></p>
+					<p><a href="mailto:support@eduonix.com">support@MyCompany.com</a></p>
 				</div>
 			</div>
 			<div class="footer-right">
 				<p class="footer-company-about">
 					<span>About the company</span>
-					We offer training and skill building courses across Technology, Design, Management, Science and Humanities.</p>
+					We sales affordable products to our consumers and serve the best and good quality products in the world.</p>
 				<div class="footer-icons">
 					<a href="#"><i class="fa fa-facebook"></i></a>
 					<a href="#"><i class="fa fa-twitter"></i></a>
