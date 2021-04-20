@@ -81,6 +81,8 @@ mysqli_close($con);
 <div class="message_box" style="margin:10px 0px;">
 <?php echo $status; ?>
 </div>
-
+<footer>
+	<button>hello</button>
+</footer>
 </body>
 </html>
