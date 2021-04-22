@@ -41,15 +41,13 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `code`, `price`, `image`) VALUES
-(1, 'Laptop Core i5', 'Laptop01', 600.00, 'product-images/laptop.jpg'),
-(2, 'Laptop Bag', 'Bag01', 50.00, 'product-images/laptop-bag.jpg'),
-(3, 'iPhone X', 'iphone01', 700.00, 'product-images/iphone.jpg');
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+('Punk_Blue_02', 'Punk_Blue_02', 6000.00, 'product-images/Punk_Blue__02.jpg'),
+('Redmi-note-7', 'Redmi-note-7', 5090.00, 'product-images/redmi-note-7.jpg'),
+('Vivo Y30', 'Vivo Y30', 10600.00, 'product-images/Vivo-Y30.png'),
+('samsung_galaxy_a50', 'samsung_galaxy_a50', 10600.00, 'product-images/samsung_galaxy_a50.jpg')
+;
 
 INSERT INTO `products` (`id`, `name`, `code`, `price`, `image`) VALUES
-(4, 'Punk_Blue_02', 'Punk_Blue_02', 6000.00, 'product-images/Punk_Blue__02.jpg'),
-(5, 'Redmi-note-7', 'Redmi-note-7', 5090.00, 'product-images/redmi-note-7.jpg'),
-(6, 'Vivo Y30', 'Vivo Y30', 10600.00, 'product-images/Vivo-Y30.png');
+(4, 'Punk_Blue_02', 'Punk_Blue_02', 6000.00, 'product-images/'),
+(5, 'Redmi-note-7', 'Redmi-note-7', 5090.00, 'product-images/'),
+(6, 'Vivo Y30', 'Vivo Y30', 10600.00, 'product-images/');
