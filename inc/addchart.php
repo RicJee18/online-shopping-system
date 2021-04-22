@@ -2,7 +2,7 @@
 
 session_start();
 include './db.php';
-$status="";
+$status = "";
 
 if (isset($_POST['code']) && $_POST['code']!=""){
 $code = $_POST['code'];
