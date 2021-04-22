@@ -24,6 +24,25 @@ h1,h2,h3,h4,h5,h6 {
 	margin: 0px;
 }
 
+#cart-btn{
+
+	background-color: #a4c639;
+	color: #fff;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 12px 30px;
+	border-radius: 30px;
+	display: inline-block;
+	transition: all 0.3s;
+}
+
+#cart-btn:hover{
+	
+	background-color: #fff;
+	color: #a4c639;
+}
+
 a.filled-button {
 	background-color: #a4c639;
 	color: #fff;

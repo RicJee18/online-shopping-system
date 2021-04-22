@@ -1,77 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-  <head>
+include_once('./inc/addchart.php');
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+?>
 
-    <title>PHPJabbers.com | Free Mobile Store Website Template</title>
+<body>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <?php
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-  </head>
+      // Preloader Start 
+      include_once('./inc/header.php');
 
-  <body>
+      //header 
+      include_once('./inc/preloader.php');
 
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>  
-    <!-- ***** Preloader End ***** -->
+      //sub-header
+      include_once('./inc/sub-header.php');
 
-    <!-- Header -->
-    <div class="sub-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-xs-12">
-            <ul class="left-info">
-              <li><a href="#"><i class="fa fa-envelope"></i>contact@company.com</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>123-456-7890</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="right-icons">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    
+      ?>
+
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Mobile Store<em> Website</em></h2></a>
+          <a class="navbar-brand" href="index.html"><h2>RJJ<em> Phone</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home
+                <a class="nav-link" href="index.php">Home
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="products.html">Products</a>
+                <a class="nav-link" href="products.php">Products</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="checkout.html">Checkout</a>
+     
+                <?php
+								  if(!empty($_SESSION["shopping_cart"])) {
+								  	$cart_count = count(array_keys($_SESSION["shopping_cart"]));
+								?>
+
+                <div class="cart_div">
+                   <a class="nav-link text-white" href="checkout.php">Checkout<span><?php echo $cart_count; }?></span></a>
+								 </div>
+
+
               </li>
               <li class="nav-item dropdown">
                 <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
@@ -85,6 +61,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="mt-1 btn btn-success" href="login.php">Sign In</a>
               </li>
             </ul>
           </div>
@@ -106,126 +85,65 @@
 
     <div class="services">
       <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/product-1-720x480.jpg" alt="">
-              <div class="down-content">
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                </div>
+        <div class="row mt-1">
 
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis asperiores eveniet iure impedit soluta aliquid. </p>
-                <a href="product-details.html" class="filled-button">View More</a>
+
+        <?php
+        
+            $result = mysqli_query($con,"SELECT * FROM `products`");
+
+            while($row = mysqli_fetch_assoc($result))
+      
+           { 
+        
+        ?>
+           
+
+           <div class="col-md-4">
+            <div class="service-item">
+              <img src="<?php echo $row['image'];?>" alt=""   width="300" height="300" >
+              <div class="down-content">
+                <form action="" method="post">
+                  <input type='hidden' name='code' value = "<?php echo $row['code']; ?>" />
+                  <h4><?php echo $row['name'];?></h4>
+                  <div style="margin-bottom:10px;">
+                    <span>
+                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup><?php echo $row['price'];?>
+                    </span>
+                  </div>
+                  <div class='product-rating'>
+                    <i class='fa fa-star'></i>
+                    <i class='fa fa-star'></i>
+                    <i class='fa fa-star'></i>
+                    <i class='fa fa-star'></i>
+                    <i class='fa fa-star'></i>
+                  </div>
+                  
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis asperiores eveniet iure impedit soluta aliquid. </p>
+                  <a href="product-details.html" class="filled-button">View More</a>
+                  <button type="submit" id="cart-btn" class="btn">Add to Cart</button>
+                </form>
               </div>
             </div>
 
             <br>
           </div>
 
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/product-2-720x480.jpg" alt="">
-              <div class="down-content">
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                </div>
 
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, impedit itaque delectus laboriosam quas veniam. </p>
-                <a href="product-details.html" class="filled-button">View More</a>
-              </div>
-            </div>
+        <?php
 
-            <br>
-          </div>
+           }
 
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/product-3-720x480.jpg" alt="">
-              <div class="down-content">
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                </div>
+           mysqli_close($con);         
 
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id eius at unde natus, sit possimus. </p>
-                <a href="product-details.html" class="filled-button">View More</a>
-              </div>
-            </div>
+        ?>
 
-            <br>
-          </div>
+      </div>
 
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/product-4-720x480.jpg" alt="">
-              <div class="down-content">
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                </div>
+      <br>
+      <br>
 
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab voluptatibus cupiditate repudiandae hic odio quas. </p>
-                <a href="product-details.html" class="filled-button">View More</a>
-              </div>
-            </div>
-
-            <br>
-          </div>
-
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/product-5-720x480.jpg" alt="">
-              <div class="down-content">
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                </div>
-
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat in a repellendus nobis! Iure, eveniet! </p>
-                <a href="product-details.html" class="filled-button">View More</a>
-              </div>
-            </div>
-
-            <br>
-          </div>
-
-          <div class="col-md-4">
-            <div class="service-item">
-              <img src="assets/images/product-6-720x480.jpg" alt="">
-              <div class="down-content">
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <div style="margin-bottom:10px;">
-                  <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup>1779
-                  </span>
-                </div>
-
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque quis quam porro. Sint, in, at. </p>
-                <a href="product-details.html" class="filled-button">View More</a>
-              </div>
-            </div>
-
-            <br>
-          </div>
-        </div>
-
-        <br>
-        <br>
-
-        <nav>
+      <nav>
           <ul class="pagination pagination-lg justify-content-center">
             <li class="page-item">
               <a class="page-link" href="#" aria-label="Previous">

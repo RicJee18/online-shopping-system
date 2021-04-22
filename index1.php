@@ -40,19 +40,23 @@ if(empty($_SESSION["shopping_cart"])) {
 ?>
 
 
+
+
 <!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	<title>Simple Shopping Cart</title>
-	<link rel='stylesheet' href='./css/style.css' type='text/css' media='all' />
+	<link rel='stylesheet' href='style.css' type='text/css' media='all' />
 
   </head>
   <body>
@@ -87,7 +91,7 @@ if(empty($_SESSION["shopping_cart"])) {
 									$cart_count = count(array_keys($_SESSION["shopping_cart"]));
 								?>
 								<div class="cart_div">
-									<a href="cart.php"><i class="fa fa-shopping-cart fa_custom fa-2x" style="color:white;"></i><span><?php echo $cart_count; ?></span></a>
+									<a href="cart.php" class="text-white"><i class="fa fa-shopping-cart"></i><span><?php echo $cart_count; }?></span>Cart</a>
 								</div>
 
 								<!-- Cart -->
@@ -100,93 +104,75 @@ if(empty($_SESSION["shopping_cart"])) {
 					
 		</nav>	
 
-        <!-- <div class="container">
-		    <div class="row">
-			    <div class="col-md">
-			      
-					<div class="container mt-5">
-					   <h2>Sample Online Shopping</h2> 
-					   <div class="row">
-						   <div class="col-md-12">
-							   
-
-		                  
-						</div>
-
-                            
-						
-
-						</div>
-					</div>
-			    </div>
-	  	    </div>
-	    </div> -->
         
         <h2>Sample Online Shopping</h2> 
 
-		<div class="container py-5">
-			<div class="row justify-content-center">
+		<div class="container">
 
-				<?php }
+            <div class="row mt-1">
 
+
+				<?php
+				
 					$result = mysqli_query($con,"SELECT * FROM `products`");
 
 					while($row = mysqli_fetch_assoc($result))
+			
+				{ 
+				
+				?>
+           
+
+			    <div class="col-md-4">
+				   <div class="service-item">
+						<img src="<?php echo $row['image'];?>" alt=""   width="300" height="300" >
+						<div class="down-content">
+							<form action="" method="post">
+								<input type='hidden' name='code' value = "<?php echo $row['code']; ?>" />
+								<h4><?php echo $row['name'];?></h4>
+								<div style="margin-bottom:10px;">
+									<span>
+									<del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup><?php echo $row['price'];?>
+									</span>
+								</div>
+								<div class='product-rating'>
+									<i class='fa fa-star'></i>
+									<i class='fa fa-star'></i>
+									<i class='fa fa-star'></i>
+									<i class='fa fa-star'></i>
+									<i class='fa fa-star'></i>
+								</div>
 					
-					{ 
-						
-				      ?>
-
-						<div class="col-md-3">
-
-							<div class="card text-center">
-                                
-							   <div class="card-header">
-								  <img src='<?php echo $row['image']; ?>' width="200" height="200" class="m-2" >
-								</div>
-								<div class="card-body">
-									
-								    <form action="" method="post">
-									<p class="card-text"><?php echo $row['name']; ?></p>
-
-									<p card="card-text"><input type='hidden' name='code' value = "<?php echo $row['code']; ?>" /></p>
-
-									<p card="card-text"><?php echo $row['price']; ?></p>
-
-									<div class='product-rating'>
-										<i class='fa fa-star'></i>
-										<i class='fa fa-star'></i>
-										<i class='fa fa-star'></i>
-										<i class='fa fa-star'></i>
-										<i class='fa fa-star'></i>
-									</div>
-									
-									<button type='submit' class='buy btn btn-success rounded-pill'>Add to Cart</button>
-                                   </form>
-								</div>
-							</div>
-
+								<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis asperiores eveniet iure impedit soluta aliquid. </p>
+								<button type="submit">Add to Cart</button>
+							</form>
 						</div>
-							
-					<?php }
+					</div>
 
-						mysqli_close($con);
+           		   <br>
+         		</div>
 
-					?>
-				
 
-				
+				<?php
+
+				}
+
+				mysqli_close($con);         
+
+				?>
+
 				<div style="clear:both;">
 
-                </div>
+				</div>
 
-                <div class="message_box" style="margin:10px 0px;">
-	                  <?php echo $status ; ?>;
-                </div>
+				<div class="message_box" style="margin:10px 0px;">
+					<?php echo $status ; ?>;
+				</div>
 
 			</div>
-	    </div>
-    
+
+        </div>
+			        
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
