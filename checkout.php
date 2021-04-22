@@ -47,7 +47,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>RJJ<em> Phone</em></h2></a>
+          <a class="navbar-brand" href="index.php"><h2>RJJ<em> Phone</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -68,14 +68,14 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                 <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
               
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="about.html">About Us</a>
-                    <a class="dropdown-item" href="blog.html">Blog</a>
-                    <a class="dropdown-item" href="testimonials.html">Testimonials</a>
-                    <a class="dropdown-item" href="terms.html">Terms</a>
+                    <a class="dropdown-item" href="about.php">About Us</a>
+                    <a class="dropdown-item" href="blog.php">Blog</a>
+                    <a class="dropdown-item" href="testimonials.php">Testimonials</a>
+                    <a class="dropdown-item" href="terms.php">Terms</a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="contact.php">Contact Us</a>
               </li>
               <li class="nav-item">
                 <a class="mt-1 btn btn-success" href="login.php">Sign In</a>
