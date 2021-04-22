@@ -41,15 +41,16 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `code`, `price`, `image`) VALUES
-(1, 'Laptop Core i5', 'Laptop01', 600.00, 'product-images/laptop.jpg'),
-(2, 'Laptop Bag', 'Bag01', 50.00, 'product-images/laptop-bag.jpg'),
-(3, 'iPhone X', 'iphone01', 700.00, 'product-images/iphone.jpg');
+(1, 'Galaxy A32', 'samsung01', 13990.00, 'product-images/samsung-img/Galaxy A32 13990.png'),
+(2, 'Galaxy A52 5G', 'samsung02', 23990.00, 'product-images/samsung-img/Galaxy A52 5G 23990.png'),
+(3, 'Galaxy A52', 'samsung03', 18990.00, 'product-images/samsung-img/Galaxy A52 18990.png'),
+(4, 'Galaxy A72', 'samsung04', 23990.00, 'product-images/samsung-img/Galaxy A72 23990.png'),
+(5, 'Galaxy Note20', 'samsung05', 48990.00, 'product-images/samsung-img/Galaxy Note20 48990.png'),
+(6, 'Galaxy S21 5G', 'samsung06', 47990.00, 'product-images/samsung-img/Galaxy S21 5G 47990.png'),
+(7, 'Galaxy S21 Ultra 5G', 'samsung07', 69990.00, 'product-images/samsung-img/Galaxy S21 Ultra 5G 69990.png'),
+(8, 'Galaxy S21+ 5G', 'Bag0samsung08', 57990.00, 'product-images/samsung-img/Galaxy S21+ 5G 57990.png'),
+(9, 'Galaxy Z Fold2', 'samsung09', 99990.00, 'product-images/samsung-img/Galaxy Z Fold2 99990.png');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-INSERT INTO `products` (`id`, `name`, `code`, `price`, `image`) VALUES
-(4, 'Punk_Blue_02', 'Punk_Blue_02', 6000.00, 'product-images/Punk_Blue__02.jpg'),
-(5, 'Redmi-note-7', 'Redmi-note-7', 5090.00, 'product-images/redmi-note-7.jpg'),
-(6, 'Vivo Y30', 'Vivo Y30', 10600.00, 'product-images/Vivo-Y30.png');

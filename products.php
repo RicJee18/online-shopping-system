@@ -53,14 +53,14 @@ include_once('./inc/addchart.php');
                 <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
               
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="about.html">About Us</a>
-                    <a class="dropdown-item" href="blog.html">Blog</a>
-                    <a class="dropdown-item" href="testimonials.html">Testimonials</a>
-                    <a class="dropdown-item" href="terms.html">Terms</a>
+                    <a class="dropdown-item" href="about.php">About Us</a>
+                    <a class="dropdown-item" href="blog.php">Blog</a>
+                    <a class="dropdown-item" href="testimonials.php">Testimonials</a>
+                    <a class="dropdown-item" href="terms.php">Terms</a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="contact.php">Contact Us</a>
               </li>
               <li class="nav-item">
                 <a class="mt-1 btn btn-success" href="login.php">Sign In</a>
@@ -101,7 +101,7 @@ include_once('./inc/addchart.php');
 
            <div class="col-md-4">
             <div class="service-item">
-              <img src="<?php echo $row['image'];?>" alt=""   width="300" height="300" >
+              <img src="<?php echo $row['image'];?>" alt=""   width="250" height="200" >
               <div class="down-content">
                 <form action="" method="post">
                   <input type='hidden' name='code' value = "<?php echo $row['code']; ?>" />
@@ -120,7 +120,7 @@ include_once('./inc/addchart.php');
                   </div>
                   
                   <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis asperiores eveniet iure impedit soluta aliquid. </p>
-                  <a href="product-details.html" class="filled-button">View More</a>
+                  <a href="product-details.php" class="filled-button">View More</a>
                   <button type="submit" id="cart-btn" class="btn">Add to Cart</button>
                 </form>
               </div>
@@ -170,7 +170,7 @@ include_once('./inc/addchart.php');
       </div>
     </div>
 
-    <!-- Footer Starts Here -->
+    <!-- Footer-->
     <?php include_once('./inc/footer.php'); ?>
 
   </body>
