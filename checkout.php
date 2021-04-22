@@ -23,86 +23,46 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
         $value['quantity'] = $_POST["quantity"];
         break; // Stop the loop after we've found the product
     }
-}
+  }
   	
 }
+
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
-    <title>PHPJabbers.com | Free Mobile Store Website Template</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
 
   <body>
 
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>  
-    <!-- ***** Preloader End ***** -->
+  <?php
 
-    <!-- Header -->
-    <div class="sub-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-xs-12">
-            <ul class="left-info">
-              <li><a href="#"><i class="fa fa-envelope"></i>contact@company.com</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>123-456-7890</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="right-icons">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+  // Preloader Start 
+  include_once('./inc/header.php');
+
+  //header 
+  include_once('./inc/preloader.php');
+
+  //sub-header
+  include_once('./inc/sub-header.php');
+
+?>
     
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Mobile Store<em> Website</em></h2></a>
+          <a class="navbar-brand" href="index.html"><h2>RJJ<em> Phone</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home
+                <a class="nav-link " href="index.php">Home
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="products.html">Products</a>
+              <li class="nav-item ">
+                <a class="nav-link" href="products.php">Products</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="checkout.html">Checkout</a>
+                   <a class="nav-link" href="checkout.php">Checkout</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
@@ -126,7 +86,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
       </nav>
     </header>
 
- 
+
 
     <!-- Page Content -->
     <div class="page-heading header-text">
@@ -139,101 +99,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
         </div>
       </div>
     </div>
-   
-<br>
-
-        
-<div class="cart m-5">
-	<?php
-	if(isset($_SESSION["shopping_cart"])){
-		$total_price = 0;
-	?>	
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<td></td>
-				<td>ITEM NAME</td>
-				<td>QUANTITY</td>
-				<td>UNIT PRICE</td>
-				<td>ITEMS TOTAL</td>
-        <td>ACTIONS</td>
-			</tr>   
-		</thead>
-		<tbody>
-		<tr>
-				<?php		
-				foreach ($_SESSION["shopping_cart"] as $product){
-				?>
-
-				<td><img src='<?php echo $product["image"]; ?>' width="50" height="40" /></td>
-				<td><?php echo $product["name"]; ?><br/>
-
-				
-
-				<td>
-					<form method='post' action=''>
-						<input type='hidden' name='code' value="<?php echo $product["code"]; ?>" />
-						<input type='hidden' name='action' value="change" />
-							<select name='quantity' class='quantity' onchange="this.form.submit()">
-								<option <?php if($product["quantity"]==1) echo "selected";?> value="1">1</option>
-								<option <?php if($product["quantity"]==2) echo "selected";?> value="2">2</option>
-								<option <?php if($product["quantity"]==3) echo "selected";?> value="3">3</option>
-								<option <?php if($product["quantity"]==4) echo "selected";?> value="4">4</option>
-								<option <?php if($product["quantity"]==5) echo "selected";?> value="5">5</option>
-							</select>
-					</form>
-			</td>
-			<td>
-				<?php echo "$".$product["price"]; ?>
-			</td>
-			<td>
-				<?php echo "$".$product["price"]*$product["quantity"]; ?>
-			</td>
-      <td>
-        <form method='post' action=''>
-					<input type='hidden' name='code' value="<?php echo $product["code"]; ?>" />
-					<input type='hidden' name='action' value="remove" />
-					<button type='submit' class='remove'>Remove Item</button>
-				</form>
-      </td>
-
-			</tr>	
-        <?php
-          $total_price += ($product["price"]*$product["quantity"]);
-        }
-      ?>
-
-			<tr>
-
-				<td colspan="5" align="right">
-					<strong>TOTAL: <?php echo "$".$total_price; ?></strong>
-				</td>
-			</tr>
-		</tbody>
-	</table>	
-
-    <?php
-		}
-		else{
-			echo "<h3>Your cart is empty!</h3>";
-		}
-    ?>
-</div>
-
-<div style="clear:both;"></div>
-
-<div class="message_box" style="margin:10px 0px;">
-    <?php echo $status; ?>
-</div>
- 
-
-<div>
-	<a href="index.php" class="btn btn-primary"> < Continue shopping</a>
-</div>
-
-
-
-
+  
     <div class="contact-information">
       <div class="container">
         <ul class="list-group list-group-flush">
@@ -297,7 +163,99 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                </div>
           </li>
         </ul>
+
+
+        <div class="cart m-5">
+            <?php
+            if(isset($_SESSION["shopping_cart"])){
+              $total_price = 0;
+            ?>	
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <td></td>
+                  <td>ITEM NAME</td>
+                  <td>QUANTITY</td>
+                  <td>ACTIONS</td>
+                  <td>UNIT PRICE</td>
+                  <td>ITEMS TOTAL</td>
+                  
+                </tr>   
+              </thead>
+              <tbody>
+              <tr>
+                  <?php		
+                  foreach ($_SESSION["shopping_cart"] as $product){
+                  ?>
+
+                  <td><img src='<?php echo $product["image"]; ?>' width="50" height="40" /></td>
+                  <td><?php echo $product["name"]; ?><br/>
+
+                  <td>
+                    <form method='post' action=''>
+                      <input type='hidden' name='code' value="<?php echo $product["code"]; ?>" />
+                      <input type='hidden' name='action' value="change" />
+                        <select name='quantity' class='quantity form-control w-50 text-center' onchange="this.form.submit()">
+                          <option <?php if($product["quantity"]==1) echo "selected";?> value="1">1</option>
+                          <option <?php if($product["quantity"]==2) echo "selected";?> value="2">2</option>
+                          <option <?php if($product["quantity"]==3) echo "selected";?> value="3">3</option>
+                          <option <?php if($product["quantity"]==4) echo "selected";?> value="4">4</option>
+                          <option <?php if($product["quantity"]==5) echo "selected";?> value="5">5</option>
+                        </select>
+                    </form>
+                </td>
+                <td>
+                  <form method='post' action=''>
+                    <input type='hidden' name='code' value="<?php echo $product["code"]; ?>" />
+                    <input type='hidden' name='action' value="remove" />
+                    <button type='submit' class='remove'><i class="fa fa-trash"></i></button>
+                  </form>
+                </td>
+                <td>
+                  <?php echo "$".$product["price"]; ?>
+                </td>
+                <td>
+                  <?php echo "$".$product["price"]*$product["quantity"]; ?>
+                </td>
+                
+
+                </tr>	
+                  <?php
+                    $total_price += ($product["price"]*$product["quantity"]);
+                  }
+                ?>
+
+                <tr>
+
+                  <td colspan="6" class="text-right">
+                    <strong style="margin-right:120px;" >TOTAL:&nbsp;&nbsp; <?php echo "$ ".$total_price; ?> </strong>
+                  </td>
+                </tr>
+              </tbody>
+            </table>	
+
+              <?php
+              }
+              else{
+                echo "<h3>Your cart is empty!</h3>";
+              }
+              ?>
+          </div>
+
+          <div style="clear:both;"></div>
+
+          <div class="message_box" style="margin:10px 0px;">
+              <?php echo $status; ?>
+          </div>
+          
+
+          <div>
+            <a href="product.php" class="btn btn-primary"> < Continue shopping </a>
+          </div>
+       
       </div>
+
+
     </div>
 
     <div class="callback-form contact-us">
