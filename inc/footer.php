@@ -1,24 +1,25 @@
- <!-- Footer Starts Here -->
+     <!-- Footer Starts Here -->
  <footer>
       <div class="container">
         <div class="row">
           <div class="col-md-3 footer-item">
             <h4>Mobile Store</h4>
-            <p>Vivamus tellus mi. Nulla ne cursus elit,vulputate. Sed ne cursus augue hasellus lacinia sapien vitae.</p>
+            <p>We sale affordable products online and serve the best and good quality products in the world.</p>
             <ul class="social-icons">
-              <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a rel="nofollow" href="#" target="_blank" ><i class="fa fa-facebook" style="margin-top: 8px;"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" style="margin-top: 8px;"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" style="margin-top: 7px;"></i></a></li>
             </ul>
           </div>
           <div class="col-md-3 footer-item">
-            <h4>Useful Links</h4>
+            <h4>Learn More</h4>
             <ul class="menu-list">
-              <li><a href="#">Vivamus ut tellus mi</a></li>
-              <li><a href="#">Nulla nec cursus elit</a></li>
-              <li><a href="#">Vulputate sed nec</a></li>
-              <li><a href="#">Cursus augue hasellus</a></li>
-              <li><a href="#">Lacinia ac sapien</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Developers</a></li>
+              <li><a href="#">Referral Program</a></li>
+              <li><a href="#">Affiliate Program</a></li>
+              <li><a href="#">Reseller Program</a></li>
+              <li><a href="#">Folder Shading FAQ</a></li>
             </ul>
           </div>
           <div class="col-md-3 footer-item">
