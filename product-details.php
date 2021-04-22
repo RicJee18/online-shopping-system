@@ -177,7 +177,7 @@
                 <div class="col-md-6 col-sm-12">
                   <div class="form-group">
                     <label for="">Quantity</label>
-                    <input type="text" value="1" required="" class="form-control">
+                    <input type="number" value="1" required="" class="form-control">
                   </div>
                 </div>
                 <div class="col-lg-12">
@@ -195,16 +195,43 @@
         <br>
 
         <h4>Description</h4>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea illum necessitatibus adipisci cum dolor quam magnam similique quasi iure blanditiis?</p>
-
         <br>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum minus reprehenderit, porro alias pariatur perferendis, eaque possimus fugit doloribus perspiciatis.</p>
-
+        <p><b>Galaxy A32</b></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Awesome screen, real smooth scrolling <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimalist design with striking style <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Awesome Camera, capture every detail <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ultra Wide Camera, ultra wide moments <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Macro Camera pays attention to the tiny details <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bring the focus to the front with Depth Camera <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Front Camera, eye-catching selfies <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Awesome battery, lasts two days¹ <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Awesome performance to do more at once <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Game Booster gives you the edge <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Protect what matters to you <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Secure with a simple touch <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Optimized for your ease <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An awesome Android™ experience, always <br></p>
         <br>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur expedita, blanditiis soluta, laudantium veritatis esse nulla quasi praesentium ea architecto vero. Nemo nesciunt veritatis maxime accusamus ipsa optio inventore rem cupiditate vero vitae cumque necessitatibus nisi, sapiente possimus perspiciatis, corporis!</p>
+        <p><b>Galaxy A52/Galaxy A52 5G</b></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Steady & Bright Shots <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Impressive Ultra Wide Camera <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Detailed Macro Camera <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Awesome Performance <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Awesome screen, super smooth scrolling <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IP67-Rated Water Resistant <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Long-lasting Battery <br></p>
+        <br>
+
+        <p><b>Galaxy A72</b></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Awesome screen, real smooth scrolling <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setting a new standard for stunning design <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
         <br>
 

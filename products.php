@@ -101,7 +101,7 @@ include_once('./inc/addchart.php');
 
            <div class="col-md-4">
             <div class="service-item">
-              <img src="<?php echo $row['image'];?>" alt=""   width="250" height="200" >
+              <img src="<?php echo $row['image'];?>" alt=""   width="250" height="400" >
               <div class="down-content">
                 <form action="" method="post">
                   <input type='hidden' name='code' value = "<?php echo $row['code']; ?>" />
@@ -118,8 +118,7 @@ include_once('./inc/addchart.php');
                     <i class='fa fa-star'></i>
                     <i class='fa fa-star'></i>
                   </div>
-                  
-                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis asperiores eveniet iure impedit soluta aliquid. </p>
+                  <br>
                   <a href="product-details.php" class="filled-button">View More</a>
                   <button type="submit" id="cart-btn" class="btn">Add to Cart</button>
                 </form>
