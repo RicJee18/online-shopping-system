@@ -24,10 +24,8 @@ font-size: 12px;
 line-height: 15px;
 background: red;
 padding: -1px;
-/* border: 2px solid #fff; */
 border-radius: 50%;
 position: absolute;
-
 right: -16px;
 color: white;
 width: 16px;
