@@ -101,17 +101,18 @@ include_once('./inc/addchart.php');
 
            <div class="col-md-4">
             <div class="service-item">
-              <img src="<?php echo $row['image'];?>" alt=""   width="250" height="200" >
+              <img src="<?php echo $row['image'];?>" alt=""   width="200" height="250" >
               <div class="down-content">
                 <form action="" method="post">
                   <input type='hidden' name='code' value = "<?php echo $row['code']; ?>" />
-                  <h4><?php echo $row['name'];?></h4>
-                  <div style="margin-bottom:10px;">
+                  <h4 class="text-center"><?php echo $row['name'];?></h4>
+                  <div style="margin-bottom:10px;" class="text-center">
                     <span>
                       <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup><?php echo $row['price'];?>
                     </span>
                   </div>
-                  <div class='product-rating'>
+                  <div class='product-rating text-center'>
+                    <em>RATING</em>&nbsp;&nbsp;
                     <i class='fa fa-star'></i>
                     <i class='fa fa-star'></i>
                     <i class='fa fa-star'></i>
@@ -121,7 +122,7 @@ include_once('./inc/addchart.php');
                   
                   <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis asperiores eveniet iure impedit soluta aliquid. </p>
                   <a href="product-details.php" class="filled-button">View More</a>
-                  <button type="submit" id="cart-btn" class="btn">Add to Cart</button>
+                  <button type="submit" id="cart-btn" onclick="addedItem()" class="btn">Add to Cart</button>
                 </form>
               </div>
             </div>

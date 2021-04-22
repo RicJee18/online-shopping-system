@@ -1,8 +1,4 @@
-<<<<<<< HEAD
- <!-- Footer Starts Here -->
-=======
      <!-- Footer Starts Here -->
->>>>>>> 60e9901968df959915a1c76b02af54f0571f8eca
  <footer>
       <div class="container">
         <div class="row">
@@ -85,20 +81,14 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<<<<<<< HEAD
-=======
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
->>>>>>> 60e9901968df959915a1c76b02af54f0571f8eca
 
     <!-- Additional Scripts -->
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/owl.js"></script>
     <script src="assets/js/slick.js"></script>
     <script src="assets/js/accordions.js"></script>
-<<<<<<< HEAD
-=======
     <script src="assets/js/index.js"></script>
->>>>>>> 60e9901968df959915a1c76b02af54f0571f8eca
 
     <script language = "text/Javascript"> 
       cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
