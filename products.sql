@@ -58,3 +58,12 @@ INSERT INTO `products` (`id`, `name`, `code`, `price`, `image`) VALUES
 (7, 'Galaxy S21 Ultra 5G', 'samsung07', 69990.00, 'product-images/samsung-img/Galaxy S21 Ultra 5G 69990.png'),
 (8, 'Galaxy S21+ 5G', 'Bag0samsung08', 57990.00, 'product-images/samsung-img/Galaxy S21+ 5G 57990.png'),
 (9, 'Galaxy Z Fold2', 'samsung09', 99990.00, 'product-images/samsung-img/Galaxy Z Fold2 99990.png');
+
+-- admin ---
+
+CREATE TABLE IF NOT EXISTS `products` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `admin_name` varchar(250) NOT NULL,
+  `admin_pass` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+) 
