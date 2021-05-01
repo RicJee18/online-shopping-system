@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>PHPJabbers.com | Free Mobile Store Website Template</title>
+    <title> RRJ Mobile Store</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,6 +21,9 @@
   </head>
 
   <body>
+    <?php
+      include_once('./inc/sub-header.php');
+    ?>
 
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
@@ -31,27 +34,6 @@
         </div>
     </div>  
     <!-- ***** Preloader End ***** -->
-
-    <!-- Header -->
-    <div class="sub-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-xs-12">
-            <ul class="left-info">
-              <li><a href="#"><i class="fa fa-envelope"></i>contact@company.com</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>123-456-7890</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="right-icons">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
     
     <header class="">
       <nav class="navbar navbar-expand-lg">
@@ -69,9 +51,6 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="products.php">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="checkout.php">Checkout</a>
               </li>
               <li class="nav-item dropdown active">
                 <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
@@ -115,10 +94,10 @@
               <div class="row">
                 <div class="col-md-6 align-self-center">
                   <div class="right-content">
-                    <span>Lorem ipsum dolor sit amet</span>
+                    <span>"Be WISE, Shop WISE"</span>
                     <h2>Get to know about <em>our company</em></h2>
-                    <p>Fusce nec ultrices lectus. Duis nec scelerisque risus. Ut id tempor turpis, ac dignissim ipsum. Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem. 
-                    <br><br>Pellentesque in sagittis lacus, vel auctor sem. Quisque eu quam eleifend, ullamcorper dui nec, luctus quam.</p>
+                    <p>RJJ Company was built last 20 years ago after we graduate in the university. At first it is ou group projects before in our Software Development subject and we planned to continue the system we made and for real store authentic phones online.
+                    <br><br>We are happy to serve millions of people with a great phone and deserve the money they paid. This online platform and this company ar the way that all people around universe will all connected through our products.</p>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -138,10 +117,9 @@
         <div class="row">
           <div class="col-md-6">
             <div class="left-content">
-              <span>Lorem ipsum dolor sit amet</span>
-              <h2>Modi esse sapiente tenetur <em>impedit laudantium laborum</em></h2>
-              <p>Pellentesque ultrices at turpis in vestibulum. Aenean pretium elit nec congue elementum. Nulla luctus laoreet porta. Maecenas at nisi tempus, porta metus vitae, faucibus augue. 
-              <br><br>Fusce et venenatis ex. Quisque varius, velit quis dictum sagittis, odio velit molestie nunc, ut posuere ante tortor ut neque.</p>
+              <span>"Be WISE, Shop WISE"</span>
+              <h2>You Can't Replace a Unique Customer Service Experience <br><em>Making Your Customers Feel Special Never Gets Old</em></h2>
+              <p>The human aspect of customer experience is irreplaceable. We make sure our customers feel recognized. In turn, they’ll give our company the recognition it deserves. No matter what we’re selling, you can turn it into more than a commodity. We double down on creating examples of excellent customer service at every touchpoint.</p>
             </div>
           </div>
           <div class="col-md-6 align-self-center">

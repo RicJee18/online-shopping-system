@@ -94,7 +94,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
         <div class="row">
           <div class="col-md-12">
             <h1>Checkout</h1>
-            <span>Lorem ipsum dolor sit amet.</span>
+            <span>"Be WISE, Shop WISE"<br><br>PAY as you ORDER!</span>
           </div>
         </div>
       </div>

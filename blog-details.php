@@ -2,56 +2,10 @@
 <html lang="en">
 
   <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
-    <title>PHPJabbers.com | Free Mobile Store Website Template</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-  </head>
-
-  <body>
-
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>  
-    <!-- ***** Preloader End ***** -->
-
-    <!-- Header -->
-    <div class="sub-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-xs-12">
-            <ul class="left-info">
-              <li><a href="#"><i class="fa fa-envelope"></i>contact@company.com</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>123-456-7890</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="right-icons">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+     <?php
+      include_once('./inc/header.php');
+      include_once('./inc/sub-header.php');
+    ?>
     
     <header class="">
       <nav class="navbar navbar-expand-lg">
@@ -97,8 +51,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eaque odit, temporibus quaerat asperiores velit?</h1>
-            <span><i class="fa fa-user"></i> John Doe &nbsp;|&nbsp; <i class="fa fa-calendar"></i> 27.07.2020 10:10</span>
+            <h1>The greatest journey of online shop. The place for fun. The place to be. The quality service you expect.</h1>
+            <span><i class="fa fa-user"></i> CEO&nbsp;|&nbsp;MANAGER &nbsp;|&nbsp;PRESIDENT &nbsp;|&nbsp; <i class="fa fa-calendar"></i> 07.05.2021 10:10</span>
           </div>
         </div>
       </div>
@@ -112,17 +66,47 @@
               <img src="assets/images/blog-image-fullscren-1-1920x700.jpg" class="img-fluid" alt="">
             </div>
             <br>
-            <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam nihil magnam magni perferendis sit, inventore maxime architecto ab officia illum vitae veritatis asperiores laborum quaerat ratione omnis, possimus, sunt quae?</p>
+            <p>A cell is a device that helps you to receive and make calls easily through radio frequency within a network area. A cell phone is popularly known as mobile phones, handphones, mobile, cells and also the phone. Modern mobile telephone services use the cellular network that’s why it is also known as cellular phones. With calling service it also gives you other services such as text messaging, email, internet, video games, photography, etc. it was first discovered in 1973.</p>
             
-            <h4>Lorem ipsum dolor sit amet.</h4>
+            <p><i><b>“End-users, not technologies, shape the market. Consequently, marketers need to stay abreast not only of technological developments but also of the way people respond to them.”</b></i></p>
+
+            <p><i><b>“Mobile use is growing faster than all of Google’s internal predictions.”</b></i></p>
+
+            <p><i><b>“The trend has been that mobile was winning. It’s now won.”</b></i></p>
+
+            <p><i><b>“The expansion of mobile internet consumption is an opportunity for traditional publishers and broadcasters, as much as a threat. Traditional media has invested heavily in online brand extensions, and some of them have larger audiences online than they ever had for the offline products.”</b></i></p>
+
+            <p><i><b>“The mobile device has become our communications hub, our diary, our entertainment portal, our primary source of media consumption, our wallet and our gateway to real-time information tailored to our needs. The revolution is now!”</b></i></p>
+
+            <p><i><b>“A lot of brands weren’t secure in this mobile revolution that we’ve stumbled into, and the trust still isn’t there for many of them.”</b></i></p>
+
+            <p><i><b>“In today’s modern world, people are either asleep or connected.”</b></i></p>
+
+            <p><i><b>“The mobile phone is used from when you get up in the morning and is often the last thing you interact with at night.”</b></i></p>
+
+            <p><i><b>“With our phones acting as supercomputers in our pockets, we can find, learn, do, and buy whenever the need arises—or the whim strikes.”</b></i></p>
+
+            <p><i><b>“The future of mobile is the future of online. It is how people access online content now.”</b></i></p>
+
+            <p><i><b>“Mobile is not the future, it is the now. Meet your customers in the environment of their choice, not where it’s convenient for you.”</b></i></p>
+
+
+            <h4>Benefits and Offers of our Company</h4>
 
             <br>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus amet, corporis corrupti quod illum id autem assumenda nostrum quo, odio libero dolorum. Expedita, enim non voluptatibus qui veritatis iste ad? Voluptates natus dolor, minus culpa magnam! Iusto blanditiis beatae laudantium.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>*</b>Making communication easier <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>*</b>Closer to people <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>*</b>Packed with features <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>*</b>Love every moment  <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>*</b>Your true companion <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>*</b>Only the essentials <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>*</b>Quality at the best prices <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>*</b>The phone you always desired  <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>*</b>Just a click away <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>*</b>Communicate effortlessly <br>
+            </p>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolor nemo optio facere impedit fugiat obcaecati blanditiis tempora inventore sapiente beatae aspernatur vitae fuga totam possimus eveniet, praesentium maiores! Dolorum illum voluptates ipsum aspernatur explicabo numquam, aliquid a amet, deleniti eos suscipit totam laudantium excepturi voluptatum fugiat eum nesciunt minus iste, expedita provident temporibus, alias possimus veritatis aut fugit? Eaque.</p>
           </div>
         </div>
       </div>
@@ -134,7 +118,7 @@
           <div class="col-md-12">
             <div class="section-heading">
               <h2>Leave a <em>comment</em></h2>
-              <span>Suspendisse a ante in neque iaculis lacinia</span>
+              <span>"Be WISE, Shop WISE"</span>
             </div>
           </div>
           <div class="col-md-12">
