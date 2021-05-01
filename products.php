@@ -77,7 +77,7 @@ include_once('./inc/addchart.php');
         <div class="row">
           <div class="col-md-12">
             <h1>Products</h1>
-            <span>Lorem ipsum dolor sit amet.</span>
+            <span>"Be WISE, Shop WISE"</span>
           </div>
         </div>
       </div>

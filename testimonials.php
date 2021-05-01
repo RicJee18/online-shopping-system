@@ -2,56 +2,11 @@
 <html lang="en">
 
   <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
-    <title>PHPJabbers.com | Free Mobile Store Website Template</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-  </head>
-
   <body>
-
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>  
-    <!-- ***** Preloader End ***** -->
-
-    <!-- Header -->
-    <div class="sub-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-xs-12">
-            <ul class="left-info">
-              <li><a href="#"><i class="fa fa-envelope"></i>contact@company.com</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>123-456-7890</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="right-icons">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+  <?php
+      include_once('./inc/header.php');
+      include_once('./inc/sub-header.php');
+    ?>
     
     <header class="">
       <nav class="navbar navbar-expand-lg">
@@ -115,40 +70,21 @@
               
               <div class="testimonial-item">
                 <div class="inner-content">
-                  <h4>George Walker</h4>
-                  <span>Chief Financial Analyst</span>
-                  <p>"Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem sit amet quam. Pellentesque in sagittis lacus."</p>
+                  <img src="http://placehold.it/60x60" alt="">
+                  <h4>April Grace Diez</h4>
+                  <span>Team Lead</span>
+                  <p>"RRJ Mobile store is the best online shop that sells phones that are authentic and worth of it's price. Features are true and best phones to have and dream of."</p>
                 </div>
-                <img src="http://placehold.it/60x60" alt="">
               </div>
               
               <div class="testimonial-item">
                 <div class="inner-content">
-                  <h4>John Smith</h4>
-                  <span>Market Specialist</span>
-                  <p>"In eget leo ante. Sed nibh leo, laoreet accumsan euismod quis, scelerisque a nunc. Mauris accumsan, arcu id ornare malesuada, est nulla luctus nisi."</p>
-                </div>
-                <img src="http://placehold.it/60x60" alt="">
+                <img src="product-images/aldrin.jpg" alt="">
+                  <h4>James Aldrin Odiong</h4>
+                  <span>Web Developer</span>
+                  <p>"RRJ Mobile store, amazing products that worth the price. If you want original phone? Be WISE and Shop Wise in RRJ Mobile Store. I recommend to people who wants to own phones, "Be WISE, Shop WISE"</p>
+                </div>                
               </div>
-              
-              <div class="testimonial-item">
-                <div class="inner-content">
-                  <h4>David Wood</h4>
-                  <span>Chief Accountant</span>
-                  <p>"Ut ultricies maximus turpis, in sollicitudin ligula posuere vel. Donec finibus maximus neque, vitae egestas quam imperdiet nec. Proin nec mauris eu tortor consectetur tristique."</p>
-                </div>
-                <img src="http://placehold.it/60x60" alt="">
-              </div>
-              
-              <div class="testimonial-item">
-                <div class="inner-content">
-                  <h4>Andrew Boom</h4>
-                  <span>Marketing Head</span>
-                  <p>"Curabitur sollicitudin, tortor at suscipit volutpat, nisi arcu aliquet dui, vitae semper sem turpis quis libero. Quisque vulputate lacinia nisl ac lobortis."</p>
-                </div>
-                <img src="http://placehold.it/60x60" alt="">
-              </div>
-              
             </div>
           </div>
         </div>

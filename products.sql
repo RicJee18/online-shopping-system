@@ -16,17 +16,17 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
---
+
 -- Database: `allphptricks`
---
+
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `products`
---
 
-CREATE TABLE IF NOT EXISTS `products` (
+-- Table structure for table `products`
+
+
+CREATE TABLE IF NOT EXISTS `products`(
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(250) NOT NULL,
   `code` varchar(100) NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `code`, `price`, `image`) VALUES
+INSERT INTO `products`(`id`, `name`, `code`, `price`, `image`) VALUES
 (1, 'Samsung Galaxy A32', 'samsung01', 13990.00, 'product-images/samsung-img/Galaxy A32 13990.png'),
 (2, 'Samsung Galaxy A52 5G', 'samsung02', 23990.00, 'product-images/samsung-img/Galaxy A52 5G 23990.png'),
 (3, 'Samsung Galaxy A52', 'samsung03', 18990.00, 'product-images/samsung-img/Galaxy A52 18990.png'),
@@ -55,7 +55,7 @@ INSERT INTO `products` (`id`, `name`, `code`, `price`, `image`) VALUES
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
-INSERT INTO `products` (`id`, `name`, `code`, `price`, `image`) VALUES
+INSERT INTO `products`(`id`, `name`, `code`, `price`, `image`) VALUES
 (10, 'Vivo V9', 'vivo01', 14999.00, 'product-images/vivo-img/V9 14999.png'),
 (11, 'Vivo Y11', 'vivo02', 5999.00, 'product-images/vivo-img/Y11 5999.png'),
 (12, 'Vivo Y12', 'vivo03', 6999.00, 'product-images/vivo-img/Y12 6999.png'),
@@ -66,7 +66,7 @@ INSERT INTO `products` (`id`, `name`, `code`, `price`, `image`) VALUES
 (17, 'Vivo Y91  32GB', 'vivo08', 5999.00, 'product-images/vivo-img/Y91  32GB 5999.jpg'),
 (18, 'Vivo Y91C', 'vivo09', 4999.00, 'product-images/vivo-img/Y91C 4999.png');
 
-INSERT INTO `products` (`id`, `name`, `code`, `price`, `image`) VALUES
+INSERT INTO `products`(`id`, `name`, `code`, `price`, `image`) VALUES
 (19, 'OPPO A3s', 'oppo01', 3899.00, 'product-images/oppo-img/OPPO A3s 3899.00.jpg'),
 (20, 'OPPO A5s', 'oppo02', 2039.00, 'product-images/oppo-img/OPPO A5s 2039.00.jpg'),
 (21, 'OPPO A37', 'oppo03', 6990.00, 'product-images/oppo-img/OPPO A37 6990.jpg'),
@@ -77,7 +77,7 @@ INSERT INTO `products` (`id`, `name`, `code`, `price`, `image`) VALUES
 (26, 'OPPO F11 Pro', 'oppo08', 10890.00, 'product-images/oppo-img/OPPO F11 Pro 10,890.00.jpg'),
 (27, 'OPPO Reno', 'oppo09', 30888.00, 'product-images/oppo-img/OPPO Reno 30,888.00.jpg');
 
-INSERT INTO `products` (`id`, `name`, `code`, `price`, `image`) VALUES
+INSERT INTO `products`(`id`, `name`, `code`, `price`, `image`) VALUES
 (28, 'realme  C12', 'realme01', 5990.00, 'product-images/realme-img/realme  C12 5990.png'),
 (29, 'realme 6', 'realme02', 8990.00, 'product-images/realme-img/realme 6 8990.jpg'),
 (30, 'realme 6 Pro', 'realme03', 12990.00, 'product-images/realme-img/realme 6 Pro 12990.jpg'),

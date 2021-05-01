@@ -77,9 +77,9 @@
           <div class="item item-1">
             <div class="img-fill">
                 <div class="text-content">
-                  <h6>lorem ipsum dolor sit amet!</h6>
-                  <h4>Quam temporibus accusam <br> hic ducimus quia</h4>
-                  <p>Magni deserunt dolorem consectetur adipisicing elit. Corporis molestiae optio, laudantium odio quod rerum maiores, omnis unde quae illo.</p>
+                  <h6>#The Next Big Thing</h6>
+                  <h4>Samsung GALAXY</h4>
+                  <p>Inspire the World, Create the future.<br>Designed for Human.<br>Simply SAMSUNG</p>
                   <a href="products.php" class="filled-button">Products</a>
                 </div>
             </div>
@@ -89,9 +89,9 @@
           <div class="item item-2">
             <div class="img-fill">
                 <div class="text-content">
-                  <h6>magni deserunt dolorem harum quas!</h6>
-                  <h4>Aliquam iusto harum <br>  ratione porro odio</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa cupiditate mollitia adipisci assumenda laborum eius quae quo excepturi, eveniet. Dicta nulla ea beatae consequuntur?</p>
+                  <h6>#Brave new World</h6>
+                  <h4>VIVO</h4>
+                  <p>"Camera & Music"<br>Bringing New Focus on Photography and Audio Experience.</p>
                   <a href="about.php" class="filled-button">About Us</a>
                 </div>
             </div>
@@ -101,14 +101,24 @@
           <div class="item item-3">
             <div class="img-fill">
                 <div class="text-content">
-                  <h6>alias officia qui quae vitae natus!</h6>
-                  <h4>Lorem ipsum dolor <br>sit amet, consectetur.</h4>
-                  <p>Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate mi. Sed nec cursus augue. Phasellus lacinia ac sapien vitae dapibus. Mauris ut dapibus velit cras interdum nisl ac urna tempor mollis.</p>
+                  <h6>#Flaunt Your Night</h6>
+                  <h4>OPPO</h4>
+                  <p>Selfie EXPERT<br>It's Your Turn.<br>Designed for Life.</p>
                   <a href="contact.php" class="filled-button">Contact Us</a>
                 </div>
             </div>
           </div>
           <!-- // Item -->
+          <div class="item item-3">
+            <div class="img-fill">
+                <div class="text-content">
+                  <h6>#Dare to Leap</h6>
+                  <h4>realme</h4>
+                  <p>Proud to be Young<br>A brand of the young, by the young and for the young.</p>
+                  <a href="contact.php" class="filled-button">Contact Us</a>
+                </div>
+            </div>
+          </div>
         </div>
     </div>
     <!-- Banner Ends Here -->
@@ -118,7 +128,7 @@
         <div class="row">
           <div class="col-md-8">
             <h4>Request a call back right now ?</h4>
-            <span>Mauris ut dapibus velit cras interdum nisl ac urna tempor mollis.</span>
+            <span>Because you want a bigger screen not a bigger phone<br>"Be WISE, Shop WISE"</span>
           </div>
           <div class="col-md-4">
             <a href="contact.php" class="border-button">Contact Us</a>
@@ -133,35 +143,35 @@
           <div class="col-md-12">
             <div class="section-heading">
               <h2>Featured <em>Products</em></h2>
-              <span>Aliquam id urna imperdiet libero mollis hendrerit</span>
+              <span>"Be Wise, Shop WISE"</span>
             </div>
           </div>
           <div class="col-md-4">
             <div class="service-item">
-              <img src="assets/images/product-1-720x480.jpg" alt="">
+              <img src="product-images/samsung-img/Galaxy Z Fold2 99990.png" alt="">
               <div class="down-content">
-                <h4>Lorem ipsum dolor sit amet</h4>
+                <h4>Galaxy Z Fold2</h4>
                 <div style="margin-bottom:10px;">
-                  <span> <del><sup>$</sup>2000.00</del>  <sup>$</sup>1700.00 </span>
+                  <span> <del><sup>Php</sup>100,990.00</del>  <sup>Php</sup>99,990.00 </span>
                 </div>
-
-                <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
+                <p>The Samsung Galaxy Z Fold 2 is an Android-based foldable smartphone developed by Samsung Electronics for its Samsung Galaxy Z series, succeeding the Samsung Galaxy Z Fold.</p>
                 <a href="product-details.php" class="filled-button">View More</a>
               </div>
             </div>
             
             <br>
+          
           </div>
           <div class="col-md-4">
             <div class="service-item">
-              <img src="assets/images/product-2-720x480.jpg" alt="">
+              <img src="product-images/vivo-img/Y17 Pro 21999.png" alt="">
               <div class="down-content">
-                <h4>Lorem ipsum dolor sit amet</h4>
+                <h4>Vivo Y17 Pro</h4>
                 <div style="margin-bottom:10px;">
-                  <span> <del><sup>$</sup>2000.00</del>  <sup>$</sup>1700.00 </span>
+                  <span> <del><sup>Php</sup> 21,999.00</del>  <sup>Php</sup> 21,999.00 </span>
                 </div>
 
-                <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
+                <p>Vivo Y17 Android smartphone.Y17 features a 6.35-inch Halo FullView™ Display with a 19.3:9 aspect ratio. The screen’s divine halo rests atop the display, the perfect accent to its elegant flowing outline. </p>
                 <a href="product-details.php" class="filled-button">View More</a>
               </div>
             </div>
@@ -170,14 +180,13 @@
           </div>
           <div class="col-md-4">
             <div class="service-item">
-              <img src="assets/images/product-3-720x480.jpg" alt="">
+              <img src="product-images/realme-img/realme X3 SuperZoom 22990.jpg" alt="">
               <div class="down-content">
-                <h4>Lorem ipsum dolor sit amet</h4>
+                <h4>realme X3 SuperZoom</h4>
                 <div style="margin-bottom:10px;">
-                  <span> <del><sup>$</sup>2000.00</del>  <sup>$</sup>1700.00 </span>
+                  <span> <del><sup>Php</sup>24990.00</del>  <sup>Php</sup>22,990.00 </span>
                 </div>
-
-                <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
+                <p>The realme X3 SuperZoom camera system is equipped with a new periscope zoom lens, bringing you an all-new photography experience. Explore the world with 60X Super Zoom.</p>
                 <a href="product-details.php" class="filled-button">View More</a>
               </div>
             </div>
@@ -201,7 +210,7 @@
               <div class="right-content">
                 <span>Who we are</span>
                 <h2>Get to know about <em>our company</em></h2>
-                <p>Curabitur pulvinar sem a leo tempus facilisis. Sed non sagittis neque. Nulla conse quat tellus nibh, id molestie felis sagittis ut. Nam ullamcorper tempus ipsum in cursus</p>
+                <p>RRJ MOBILE SHOP is an incorporated online bussiness. It was launch by the creators when they studied at University of San Carlos. They made a system for online store that makes people easy access of mobile phones they wanted.</p>
                 <a href="about.php" class="filled-button">Read More</a>
               </div>
             </div>
@@ -214,16 +223,16 @@
       <div class="container">
         <div class="section-heading">
           <h2>Read our <em>Blog</em></h2>
-          <span>Aliquam id urna imperdiet libero mollis hendrerit</span>
+          <span>"Stay Closer to people around the World, Distance is not a hinder yet Our products is the gateway."</span>
         </div>
 
         <div class="row" id="tabs">
           <div class="col-md-4">
             <ul>
-              <li><a href='#tabs-1'>Lorem ipsum dolor sit amet, consectetur adipisicing <br> <small>Jeric Baterna &nbsp;|&nbsp; 27.07.2020 10:10</small></a></li>
-              <li><a href='#tabs-2'>Mauris lobortis quam id dictum dignissim <br> <small>Jurick Baybayanun &nbsp;|&nbsp; 27.07.2020 10:10</small></a></li>
-              <li><a href='#tabs-3'>Class aptent taciti sociosqu ad litora torquent per <br> <small>Rhea Amancio &nbsp;|&nbsp; 27.07.2020 10:10</small></a></li>
-            </ul>
+              <li><a href='#tabs-1'>Chief Executive Officer<br> <small>Jeric Baterna &nbsp;|&nbsp; baterna@gmail.com</small></a></li>
+              <li><a href='#tabs-2'>President<br> <small>Jurick Baybayanun &nbsp;|&nbsp; jurick@gmail.com</small></a></li>
+              <li><a href='#tabs-3'>Manager<br> <small>Rhea Amancio &nbsp;|&nbsp; yyhaer@gmail.com</small></a></li>
+              </ul>
 
             <br>
 
@@ -238,8 +247,8 @@
             <section class='tabs-content'>
               <article id='tabs-1'>
                 <img src="assets/images/pn.png" alt="">
-                <h4><a href="blog-details.php">Lorem ipsum dolor sit amet, consectetur adipisicing.</a></h4>
-                <p>Sed ut dolor in augue cursus ultrices. Vivamus mauris turpis, auctor vel facilisis in, tincidunt vel diam. Sed vitae scelerisque orci. Nunc non magna orci. Aliquam commodo mauris ante, quis posuere nibh vestibulum sit amet.</p>
+                <h4><a href="blog-details.php">RRJ COMPANY FAMILY</a></h4>
+                <p>RRJ Company Family is the non-profit organization where they were trained and became a professional as well as a bussiness owner. Passerelles Numeriques Philippines is the the gateway for life that made this company possible.</p>
               </article>
               <article id='tabs-2'>
                 <img src="assets/images/blog-image-2-940x460.jpg" alt="">
@@ -274,40 +283,21 @@
               
               <div class="testimonial-item">
                 <div class="inner-content">
-                  <h4>George Walker</h4>
-                  <span>Chief Financial Analyst</span>
-                  <p>"Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem sit amet quam. Pellentesque in sagittis lacus."</p>
-                </div>
-                <img src="http://placehold.it/60x60" alt="">
+                <img src="product-images/aldrin.jpg" alt="">
+                  <h4>James Aldrin Odiong</h4>
+                  <span>Web Developer</span>
+                  <p>"Amazing products that worth the price. If you want original phone? Be WISE and Shop Wise in RRJ Mobile Store"</p>
+                </div>                
               </div>
               
               <div class="testimonial-item">
                 <div class="inner-content">
-                  <h4>John Smith</h4>
-                  <span>Market Specialist</span>
-                  <p>"In eget leo ante. Sed nibh leo, laoreet accumsan euismod quis, scelerisque a nunc. Mauris accumsan, arcu id ornare malesuada, est nulla luctus nisi."</p>
-                </div>
-                <img src="http://placehold.it/60x60" alt="">
+                <img src="product-images/aldrin.jpg" alt="">
+                  <h4>Daryll Vildosola</h4>
+                  <span>Full Stack Developer</span>
+                  <p>"RRJ Company is the best online mobile store. You can choose different authenric phones that meet your expectations."</p>
+                </div>                
               </div>
-              
-              <div class="testimonial-item">
-                <div class="inner-content">
-                  <h4>David Wood</h4>
-                  <span>Chief Accountant</span>
-                  <p>"Ut ultricies maximus turpis, in sollicitudin ligula posuere vel. Donec finibus maximus neque, vitae egestas quam imperdiet nec. Proin nec mauris eu tortor consectetur tristique."</p>
-                </div>
-                <img src="http://placehold.it/60x60" alt="">
-              </div>
-              
-              <div class="testimonial-item">
-                <div class="inner-content">
-                  <h4>Andrew Boom</h4>
-                  <span>Marketing Head</span>
-                  <p>"Curabitur sollicitudin, tortor at suscipit volutpat, nisi arcu aliquet dui, vitae semper sem turpis quis libero. Quisque vulputate lacinia nisl ac lobortis."</p>
-                </div>
-                <img src="http://placehold.it/60x60" alt="">
-              </div>
-              
             </div>
           </div>
         </div>
