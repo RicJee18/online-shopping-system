@@ -36,19 +36,6 @@ include_once('./inc/addchart.php');
               <li class="nav-item active">
                 <a class="nav-link" href="products.php">Products</a>
               </li>
-              <li class="nav-item">
-     
-                <?php
-								  if(!empty($_SESSION["shopping_cart"])) {
-								  	$cart_count = count(array_keys($_SESSION["shopping_cart"]));
-								?>
-
-                <div class="cart_div">
-                   <a class="nav-link text-white" href="checkout.php">Checkout<span><?php echo $cart_count; }?></span></a>
-								 </div>
-
-
-              </li>
               <li class="nav-item dropdown">
                 <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
               
@@ -119,8 +106,7 @@ include_once('./inc/addchart.php');
                     <i class='fa fa-star'></i>
                   </div>
                   <br>
-                  <a href="product-details.php" class="filled-button">View More</a>
-                  <button type="submit" id="cart-btn" class="btn">Add to Cart</button>
+                  <button type="submit" id="cart-btn" class="btn">Buy Now</button>
                 </form>
               </div>
             </div>
@@ -141,31 +127,6 @@ include_once('./inc/addchart.php');
 
       <br>
       <br>
-
-      <nav>
-          <ul class="pagination pagination-lg justify-content-center">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">«</span>
-                <span class="sr-only">Previous</span>
-              </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">»</span>
-                <span class="sr-only">Next</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-        <br>
-        <br>
-        <br>
-        <br>
       </div>
     </div>
 

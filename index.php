@@ -34,19 +34,6 @@
               <li class="nav-item ">
                 <a class="nav-link" href="products.php">Products</a>
               </li>
-              <li class="nav-item">
-     
-                <?php
-								  if(!empty($_SESSION["shopping_cart"])) {
-								  	$cart_count = count(array_keys($_SESSION["shopping_cart"]));
-								?>
-
-                <div class="cart_div">
-                   <a class="nav-link text-white" href="checkout.php">Checkout<span><?php echo $cart_count; }?></span></a>
-								 </div>
-
-
-              </li>
               <li class="nav-item dropdown">
                 <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
               

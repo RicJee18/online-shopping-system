@@ -52,9 +52,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="products.php">Products</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="checkout.php">Checkout</a>
-              </li>
               <li class="nav-item dropdown active">
                 <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
               
