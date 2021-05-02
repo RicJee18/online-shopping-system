@@ -61,7 +61,7 @@
                 <a class="nav-link" href="contact.html">Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="mt-1 btn btn-success" href="Registration/login.php">Sign In</a>
+                <a class="mt-1 btn btn-success" href="landing.php">Sign In</a>
               </li>
             </ul>
           </div>

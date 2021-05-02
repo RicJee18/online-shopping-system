@@ -3,6 +3,7 @@
 session_start();
 
 $status="";
+
 if (isset($_POST['action']) && $_POST['action']=="remove"){
 if(!empty($_SESSION["shopping_cart"])) {
 	foreach($_SESSION["shopping_cart"] as $key => $value) {
