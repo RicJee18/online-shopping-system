@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `products`
 
 
-CREATE TABLE IF NOT EXISTS `products`(
+CREATE TABLE IF NOT EXISTS `product`(
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(250) NOT NULL,
   `code` varchar(100) NOT NULL,
@@ -40,22 +40,22 @@ CREATE TABLE IF NOT EXISTS `products`(
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products`(`id`, `name`, `code`, `price`, `image`) VALUES
-(28, 'Samsung Galaxy A32', 'samsung01', 13990.00, 'product-images/samsung-img/Galaxy A32 13990.png'),
-(29, 'Samsung Galaxy A52 5G', 'samsung02', 23990.00, 'product-images/samsung-img/Galaxy A52 5G 23990.png'),
-(30, 'Samsung Galaxy A52', 'samsung03', 18990.00, 'product-images/samsung-img/Galaxy A52 18990.png'),
-(31, 'Samsung Galaxy A72', 'samsung04', 23990.00, 'product-images/samsung-img/Galaxy A72 23990.png'),
-(32, 'Samsung Galaxy Note20', 'samsung05', 48990.00, 'product-images/samsung-img/Galaxy Note20 48990.png'),
-(33, 'Samsung Galaxy S21 5G', 'samsung06', 47990.00, 'product-images/samsung-img/Galaxy S21 5G 47990.png'),
-(34, 'Galaxy S21 Ultra 5G', 'samsung07', 69990.00, 'product-images/samsung-img/Galaxy S21 Ultra 5G 69990.png'),
-(35, 'Samsung Galaxy S21+ 5G', 'samsung08', 57990.00, 'product-images/samsung-img/Galaxy S21+ 5G 57990.png'),
-(36, 'Samsung Galaxy Z Fold2', 'samsung09', 99990.00, 'product-images/samsung-img/Galaxy Z Fold2 99990.png');
+INSERT INTO `product`(`id`, `name`, `code`, `price`, `image`) VALUES
+(28, 'Samsung Galaxy A32', 'samsung01', 13990.00, '../product-images/samsung-img/Galaxy A32 13990.png'),
+(29, 'Samsung Galaxy A52 5G', 'samsung02', 23990.00, '../product-images/samsung-img/Galaxy A52 5G 23990.png'),
+(30, 'Samsung Galaxy A52', 'samsung03', 18990.00, '../product-images/samsung-img/Galaxy A52 18990.png'),
+(31, 'Samsung Galaxy A72', 'samsung04', 23990.00, '../product-images/samsung-img/Galaxy A72 23990.png'),
+(32, 'Samsung Galaxy Note20', 'samsung05', 48990.00, '../product-images/samsung-img/Galaxy Note20 48990.png'),
+(33, 'Samsung Galaxy S21 5G', 'samsung06', 47990.00, '../product-images/samsung-img/Galaxy S21 5G 47990.png'),
+(34, 'Galaxy S21 Ultra 5G', 'samsung07', 69990.00, '../product-images/samsung-img/Galaxy S21 Ultra 5G 69990.png'),
+(35, 'Samsung Galaxy S21+ 5G', 'samsung08', 57990.00, '../product-images/samsung-img/Galaxy S21+ 5G 57990.png'),
+(36, 'Samsung Galaxy Z Fold2', 'samsung09', 99990.00, '../product-images/samsung-img/Galaxy Z Fold2 99990.png');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
-INSERT INTO `products`(`id`, `name`, `code`, `price`, `image`) VALUES
+INSERT INTO `product`(`id`, `name`, `code`, `price`, `image`) VALUES
 (1, 'Vivo V9', 'vivo01', 14999.00, 'product-images/vivo-img/V9 14999.png'),
 (2, 'Vivo Y11', 'vivo02', 5999.00, 'product-images/vivo-img/Y11 5999.png'),
 (3, 'Vivo Y12', 'vivo03', 6999.00, 'product-images/vivo-img/Y12 6999.png'),
@@ -66,18 +66,18 @@ INSERT INTO `products`(`id`, `name`, `code`, `price`, `image`) VALUES
 (8, 'Vivo Y91  32GB', 'vivo08', 5999.00, 'product-images/vivo-img/Y91  32GB 5999.jpg'),
 (9, 'Vivo Y91C', 'vivo09', 4999.00, 'product-images/vivo-img/Y91C 4999.png');
 
-INSERT INTO `products`(`id`, `name`, `code`, `price`, `image`) VALUES
-(10, 'OPPO A3s', 'oppo01', 3899.00, 'product-images/oppo-img/OPPO A3s 3899.00.jpg'),
-(11, 'OPPO A5s', 'oppo02', 2039.00, 'product-images/oppo-img/OPPO A5s 2039.00.jpg'),
-(12, 'OPPO A37', 'oppo03', 6990.00, 'product-images/oppo-img/OPPO A37 6990.jpg'),
-(13, 'OPPO F5', 'oppo04', 3080.00, 'product-images/oppo-img/OPPO F5 3080.00.jpg'),
-(14, 'OPPO F7', 'oppo05', 18999.00, 'product-images/oppo-img/OPPO F7 18,999.00.jpg'),
-(15, 'OPPO F9', 'oppo06', 5499.00, 'product-images/oppo-img/OPPO F9 5499.00.jpg'),
-(16, 'OPPO F11', 'oppo07', 10299.00, 'product-images/oppo-img/OPPO F11 10,299.00.jpg'),
-(17, 'OPPO F11 Pro', 'oppo08', 10890.00, 'product-images/oppo-img/OPPO F11 Pro 10,890.00.jpg'),
-(18, 'OPPO Reno', 'oppo09', 30888.00, 'product-images/oppo-img/OPPO Reno 30,888.00.jpg');
+INSERT INTO `product`(`id`, `name`, `code`, `price`, `image`) VALUES
+(10, 'OPPO A3s', 'oppo01', 3899.00, '../product-images/oppo-img/OPPO A3s 3899.00.jpg'),
+(11, 'OPPO A5s', 'oppo02', 2039.00, '../product-images/oppo-img/OPPO A5s 2039.00.jpg'),
+(12, 'OPPO A37', 'oppo03', 6990.00, '../product-images/oppo-img/OPPO A37 6990.jpg'),
+(13, 'OPPO F5', 'oppo04', 3080.00, '../product-images/oppo-img/OPPO F5 3080.00.jpg'),
+(14, 'OPPO F7', 'oppo05', 18999.00, '../product-images/oppo-img/OPPO F7 18,999.00.jpg'),
+(15, 'OPPO F9', 'oppo06', 5499.00, '../product-images/oppo-img/OPPO F9 5499.00.jpg'),
+(16, 'OPPO F11', 'oppo07', 10299.00, '../product-images/oppo-img/OPPO F11 10,299.00.jpg'),
+(17, 'OPPO F11 Pro', 'oppo08', 10890.00, '../product-images/oppo-img/OPPO F11 Pro 10,890.00.jpg'),
+(18, 'OPPO Reno', 'oppo09', 30888.00, '../product-images/oppo-img/OPPO Reno 30,888.00.jpg');
 
-INSERT INTO `products`(`id`, `name`, `code`, `price`, `image`) VALUES
+INSERT INTO `product`(`id`, `name`, `code`, `price`, `image`) VALUES
 (19, 'realme  C12', 'realme01', 5990.00, 'product-images/realme-img/realme  C12 5990.png'),
 (20, 'realme 6', 'realme02', 8990.00, 'product-images/realme-img/realme 6 8990.jpg'),
 (21, 'realme 6 Pro', 'realme03', 12990.00, 'product-images/realme-img/realme 6 Pro 12990.jpg'),

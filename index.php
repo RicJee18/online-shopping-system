@@ -3,8 +3,6 @@
 
     <?php
 
-    include_once('./inc/addchart.php');
-
     // Preloader Start 
     include_once('./inc/header.php');
 
@@ -48,7 +46,7 @@
                 <a class="nav-link" href="contact.html">Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="mt-1 btn btn-success" href="Registration/login.php">Sign In</a>
+                <a class="mt-1 btn btn-success" href="login.php">Sign In</a>
               </li>
             </ul>
           </div>
@@ -142,7 +140,7 @@
                   <span> <del><sup>Php</sup>100,990.00</del>  <sup>Php</sup>99,990.00 </span>
                 </div>
                 <p>The Samsung Galaxy Z Fold 2 is an Android-based foldable smartphone developed by Samsung Electronics for its Samsung Galaxy Z series, succeeding the Samsung Galaxy Z Fold.</p>
-                <a href="product-details.php" class="filled-button">View More</a>
+                <a href="landing.php" class="filled-button">View More</a>
               </div>
             </div>
             
@@ -159,7 +157,7 @@
                 </div>
 
                 <p>Vivo Y17 Android smartphone.Y17 features a 6.35-inch Halo FullView™ Display with a 19.3:9 aspect ratio. The screen’s divine halo rests atop the display, the perfect accent to its elegant flowing outline. </p>
-                <a href="product-details.php" class="filled-button">View More</a>
+                <a href="landing.php" class="filled-button">View More</a>
               </div>
             </div>
 
@@ -174,7 +172,7 @@
                   <span> <del><sup>Php</sup>24990.00</del>  <sup>Php</sup>22,990.00 </span>
                 </div>
                 <p>The realme X3 SuperZoom camera system is equipped with a new periscope zoom lens, bringing you an all-new photography experience. Explore the world with 60X Super Zoom.</p>
-                <a href="product-details.php" class="filled-button">View More</a>
+                <a href="landing.php" class="filled-button">View More</a>
               </div>
             </div>
 

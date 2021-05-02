@@ -14,14 +14,14 @@ include_once('inc/header.php');
             <h5 class="card-title text-center">Register</h5>
             <form class="form-signin" method="post" action="register.php" >
 
-			  <?php include('error.php'); ?>
+			       <?php include('error.php'); ?>
 
               <div class="form-label-group">
                 <input type="text" id="inputUserame" name ="username" class="form-control" placeholder="Username" value="<?php echo $username; ?>" required autofocus>
                 <label for="inputUserame">Username</label>
               </div>
 
-			  <div class="form-label-group">
+			       <div class="form-label-group">
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name ="email" required>
                 <label for="inputEmail">Email address</label>
               </div>
