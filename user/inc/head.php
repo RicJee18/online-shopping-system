@@ -5,7 +5,7 @@
                     <div class="container-fluid">
                         <div class="header-wrap">
                             <form class="form-header" action="" method="POST">
-                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
+                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search here..." />
                                 <button class="au-btn--submit" type="submit">
                                     <i class="zmdi zmdi-search"></i>
                                 </button>
@@ -13,7 +13,7 @@
                             <div class="header-button">
                                 <div class="noti-wrap">
                                     <div class="noti__item js-item-menu">
-                                        <i class="zmdi zmdi-comment-more"></i>
+                                        <i class="zmdi zmdi-shopping-cart"></i>
                                         <span class="quantity">1</span>
                                         <div class="mess-dropdown js-dropdown">
                                             <div class="mess__title">

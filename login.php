@@ -1,10 +1,10 @@
-<?php 
+<?php
 
-require_once('store.php');
-$mystore->login();
+include_once('server.php');
+include_once('./inc/header.php');
 
 ?>
-<?php include_once('./inc/header.php'); ?>
+
 <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
     <div class="border-0">
         <div class="row d-flex">
@@ -19,8 +19,8 @@ $mystore->login();
             <div class="col-lg-6">
                 <div class="card2 card border-0 px-4 py-5">
 
-                   <?php if(isset($error_msg)){ echo $error_msg; } ?>
-                   
+                   <?php include 'error.php'; ?>
+
                     <form action="" method="post">
                         <div class="row mb-4 px-3">
                             <h6 class="mb-0 mr-4 mt-2">Sign in with</h6>
@@ -39,15 +39,15 @@ $mystore->login();
                             <div class="line"></div>
                         </div>
                         <div class="row px-3"> <label class="mb-1">
-                                <h6 class="mb-0 text-sm">Email Address</h6>
-                            </label> <input class="mb-4" type="text" name="email" placeholder="Enter a valid email address"> </div>
+                                <h6 class="mb-0 text-sm">Username</h6>
+                            </label> <input class="mb-4" type="text" name="username" placeholder="Enter your username or email" required autofocus> </div>
                         <div class="row px-3"> <label class="mb-1">
                                 <h6 class="mb-0 text-sm">Password</h6>
                             </label> <input type="password" name="password" placeholder="Enter password"> </div>
                         <div class="row px-3 mb-4">
                             <div class="custom-control custom-checkbox custom-control-inline"> <input id="chk1" type="checkbox" name="chk" class="custom-control-input"> <label for="chk1" class="custom-control-label text-sm">Remember me</label> </div> <a href="#" class="ml-auto mb-0 text-sm">Forgot Password?</a>
                         </div>
-                        <div class="row mb-3 px-3"> <button type="submit" name="submit" class="btn btn-blue text-center">Login</button> </div>
+                        <div class="row mb-3 px-3"> <button type="submit" name="login_user" class="btn btn-blue text-center">Login</button> </div>
                     </form>
                     <div class="row mb-4 px-3"> <small class="font-weight-bold">Don't have an account? <a class="text-danger" href="register.php">Register</a></small> </div>
                 </div>

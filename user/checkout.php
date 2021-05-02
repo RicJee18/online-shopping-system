@@ -169,11 +169,11 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                           </td>
                           
 
-                          </tr>	
+                        </tr>	
                             <?php
                               $total_price += ($product["price"]*$product["quantity"]);
                             }
-                          ?>
+                            ?>
 
                           <tr>
 

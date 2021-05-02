@@ -1,3 +1,35 @@
+<?php
+
+session_start();
+
+$status="";
+
+if (isset($_POST['action']) && $_POST['action']=="remove"){
+if(!empty($_SESSION["shopping_cart"])) {
+	foreach($_SESSION["shopping_cart"] as $key => $value) {
+		if($_POST["code"] == $key){
+		unset($_SESSION["shopping_cart"][$key]);
+		$status = "<div class='box' style='color:red;'>
+		Product is removed from your cart!</div>";
+		}
+		if(empty($_SESSION["shopping_cart"]))
+		unset($_SESSION["shopping_cart"]);
+			}		
+		}
+}
+
+if (isset($_POST['action']) && $_POST['action']=="change"){
+  foreach($_SESSION["shopping_cart"] as &$value){
+    if($value['code'] === $_POST["code"]){
+        $value['quantity'] = $_POST["quantity"];
+        break; // Stop the loop after we've found the product
+    }
+  }
+  	
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +71,7 @@
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
         
-        <?php include_once('./inc/head-desktop.php');?>
+        <?php include_once('./inc/head.php');?>
 
         <!-- END HEADER MOBILE-->
 
@@ -303,87 +335,93 @@
             <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Yearly Sales</h3>
-                                        <canvas id="sales-chart"></canvas>
+                            <div>
+                                <a href="index.php" class="btn btn-success"> < Continue shopping </a>
+                            </div>
+
+                            <div class="row m-t-30 justify-content-center">
+                                <div class="col-md-12">
+                                        <?php
+                                            if(isset($_SESSION["shopping_cart"])){
+                                            $total_price = 0;
+                                        ?>	
+                                    <!-- DATA TABLE-->
+                                    <div class="table-responsive m-b-40">
+                                        <table class="table table-borderless table-data3">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Item Name</th>
+                                                    <th>Quantity</th>
+                                                    <th>Unit Price</th>
+                                                    <th>Item Total</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <?php		
+                                                        foreach ($_SESSION["shopping_cart"] as $product){
+                                                    ?>
+                                                    <td><img src='<?php echo $product["image"]; ?>' width="50" height="40" /></td>
+                                                    <td><?php echo $product["name"]; ?></td>
+                                                    <td class="process">
+                                                        <form method='post' action=''>
+                                                            <input type='hidden' name='code' value="<?php echo $product["code"]; ?>" />
+                                                            <input type='hidden' name='action' value="change" />
+                                                            <select name='quantity' class='quantity form-control  text-center' onchange="this.form.submit()">
+                                                                <option <?php if($product["quantity"]==1) echo "selected";?> value="1">1</option>
+                                                                <option <?php if($product["quantity"]==2) echo "selected";?> value="2">2</option>
+                                                                <option <?php if($product["quantity"]==3) echo "selected";?> value="3">3</option>
+                                                                <option <?php if($product["quantity"]==4) echo "selected";?> value="4">4</option>
+                                                                <option <?php if($product["quantity"]==5) echo "selected";?> value="5">5</option>
+                                                            </select>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                         <?php echo "$".$product["price"]; ?>
+                                                    </td>
+                                                    <td>
+                                                          <?php echo "$".$product["price"]*$product["quantity"]; ?>
+                                                    </td>
+                                                    <td>
+                                                        <form method='post' action=''>
+                                                            <input type='hidden' name='code' value="<?php echo $product["code"]; ?>" />
+                                                            <input type='hidden' name='action' value="remove" />
+                                                            <button type='submit' class='remove btn btn-danger'>Remove</button>
+                                                        </form>
+                                                    </td>
+                                                </tr>	
+                                                        <?php
+                                                        $total_price += ($product["price"]*$product["quantity"]);
+                                                        }
+                                                        ?>
+
+                                                <tr>
+
+                                                   <td colspan="6" class="text-right">
+                                                      <strong style="margin-right:260px;" >TOTAL:&nbsp;&nbsp; <?php echo "$ ".$total_price; ?> </strong>
+                                                    </td>
+                                               </tr>
+                                                <tr>
+
+                                                 <?php
+                                                    }
+                                                    else{
+                                                     echo "<h3>Your cart is empty!</h3>";
+                                                    }
+                                                ?>
+                                                </tr>
+                                                <tr>
+                                                    <?php echo $status; ?>
+                                                </tr>
+                                        
+                                            </tbody>
+                                        </table>
                                     </div>
+                                    <!-- END DATA TABLE-->
                                 </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Team Commits</h3>
-                                        <canvas id="team-chart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Bar chart</h3>
-                                        <canvas id="barChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Rader chart</h3>
-                                        <canvas id="radarChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Line Chart</h3>
-                                        <canvas id="lineChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Doughut Chart</h3>
-                                        <canvas id="doughutChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Pie Chart</h3>
-                                        <canvas id="pieChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Polar Chart</h3>
-                                        <canvas id="polarChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Single Bar Chart</h3>
-                                        <canvas id="singelBarChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="copyright">
-                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
