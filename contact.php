@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>PHPJabbers.com | Free Mobile Store Website Template</title>
+    <title>RRJ Mobile Store</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -38,8 +38,8 @@
         <div class="row">
           <div class="col-md-8 col-xs-12">
             <ul class="left-info">
-              <li><a href="#"><i class="fa fa-envelope"></i>contact@company.com</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>123-456-7890</a></li>
+              <li><a href="#"><i class="fa fa-envelope"></i>rrj@nasipit.com</a></li>
+              <li><a href="#"><i class="fa fa-phone"></i>090-5633-8394</a></li>
             </ul>
           </div>
           <div class="col-md-4">
@@ -69,9 +69,6 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="products.php">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="checkout.php">Checkout</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
@@ -114,23 +111,23 @@
             <div class="contact-item">
               <i class="fa fa-phone"></i>
               <h4>Phone</h4>
-              <p>Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate nec cursus augue.</p>
-              <a href="#">+1 333 4040 5566</a>
+              <p>Feel free to call or send us message your clarifications and more information on our local phone number</p>
+              <a href="#">+639056338394</a>
             </div>
           </div>
           <div class="col-md-4">
             <div class="contact-item">
               <i class="fa fa-envelope"></i>
               <h4>Email</h4>
-              <p>Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate nec cursus augue.</p>
-              <a href="#">contact@company.com</a>
+              <p>Feel free to send us messages for more information on our products via gmail account</p>
+              <a href="#">rrj@nasipit.com</a>
             </div>
           </div>
           <div class="col-md-4">
             <div class="contact-item">
               <i class="fa fa-map-marker"></i>
               <h4>Location</h4>
-              <p>212 Barrington Court New York str <br> USA</p>
+              <p>Samjung Building, Nasipit Road, Talamban, Cebu City <br> PHILIPPINES</p>
               <a href="#">View on Google Maps</a>
             </div>
           </div>

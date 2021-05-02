@@ -36,19 +36,6 @@ include_once('./inc/addchart.php');
               <li class="nav-item active">
                 <a class="nav-link" href="products.php">Products</a>
               </li>
-              <li class="nav-item">
-     
-                <?php
-								  if(!empty($_SESSION["shopping_cart"])) {
-								  	$cart_count = count(array_keys($_SESSION["shopping_cart"]));
-								?>
-
-                <div class="cart_div">
-                   <a class="nav-link text-white" href="checkout.php">Checkout<span><?php echo $cart_count; }?></span></a>
-								 </div>
-
-
-              </li>
               <li class="nav-item dropdown">
                 <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
               
@@ -77,7 +64,7 @@ include_once('./inc/addchart.php');
         <div class="row">
           <div class="col-md-12">
             <h1>Products</h1>
-            <span>Lorem ipsum dolor sit amet.</span>
+            <span>"Be WISE, Shop WISE"</span>
           </div>
         </div>
       </div>
@@ -101,7 +88,7 @@ include_once('./inc/addchart.php');
 
            <div class="col-md-4">
             <div class="service-item">
-              <img src="<?php echo $row['image'];?>" alt=""   width="200" height="250" >
+              <img src="<?php echo $row['image'];?>" alt=""   width="250" height="400" >
               <div class="down-content">
                 <form action="" method="post">
                   <input type='hidden' name='code' value = "<?php echo $row['code']; ?>" />
@@ -119,10 +106,8 @@ include_once('./inc/addchart.php');
                     <i class='fa fa-star'></i>
                     <i class='fa fa-star'></i>
                   </div>
-                  
-                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis asperiores eveniet iure impedit soluta aliquid. </p>
-                  <a href="product-details.php" class="filled-button">View More</a>
-                  <button type="submit" id="cart-btn" onclick="addedItem()" class="btn">Add to Cart</button>
+                  <br>
+                  <button type="submit" id="cart-btn" class="btn">Buy Now</button>
                 </form>
               </div>
             </div>
@@ -143,31 +128,6 @@ include_once('./inc/addchart.php');
 
       <br>
       <br>
-
-      <nav>
-          <ul class="pagination pagination-lg justify-content-center">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">«</span>
-                <span class="sr-only">Previous</span>
-              </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">»</span>
-                <span class="sr-only">Next</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-        <br>
-        <br>
-        <br>
-        <br>
       </div>
     </div>
 

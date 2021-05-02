@@ -2,56 +2,12 @@
 <html lang="en">
 
   <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
-    <title>PHPJabbers.com | Free Mobile Store Website Template</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-  </head>
-
   <body>
 
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>  
-    <!-- ***** Preloader End ***** -->
-
-    <!-- Header -->
-    <div class="sub-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-xs-12">
-            <ul class="left-info">
-              <li><a href="#"><i class="fa fa-envelope"></i>contact@company.com</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>123-456-7890</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="right-icons">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+  <?php
+      include_once('./inc/header.php');
+      include_once('./inc/sub-header.php');
+    ?>
     
     <header class="">
       <nav class="navbar navbar-expand-lg">
@@ -69,9 +25,6 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="products.php">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="checkout.php">Checkout</a>
               </li>
               <li class="nav-item dropdown active">
                 <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
@@ -101,7 +54,7 @@
         <div class="row">
           <div class="col-md-12">
             <h1>Terms</h1>
-            <span>Lorem ipsum dolor sit amet.</span>
+            <span>Don't get a charge out of unsafe conditions</span>
           </div>
         </div>
       </div>
@@ -111,31 +64,24 @@
       <div class="container">
         <div class="more-info-content">
           <div class="right-content">
-            <span>A) Lorem ipsum dolor sit amet</span>
-            <h5>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, iure.</h5>
+            <h5>1. Limitation of Liability</h5>
             <br>  
-            <p>Fusce nec ultrices lectus. Duis nec scelerisque risus. Ut id tempor turpis, ac dignissim ipsum. Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem. Pellentesque in sagittis lacus, vel auctor sem. Quisque eu quam eleifend, ullamcorper dui nec, luctus quam.</p>
+            <p>This clause lets our customers know that we or our business will not be held responsible in case of any liability issues. These may be related to personal injury, death, fraudulent misrepresentation, defective items or other product, service or delivery problems.</p>
 
             <br>
-
-            <span>A) Lorem ipsum dolor sit amet</span>
-            <h5>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, iure.</h5>
+            <h5>2. Intellectual Property/Trademarks</h5>
             <br>  
-            <p>Fusce nec ultrices lectus. Duis nec scelerisque risus. Ut id tempor turpis, ac dignissim ipsum. Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem. Pellentesque in sagittis lacus, vel auctor sem. Quisque eu quam eleifend, ullamcorper dui nec, luctus quam.</p>
+            <p>As the owner of an RRJ Mobile store, we likely have unique items, designs, content or other proprietary rights that we want to protect. We can do this with a properly written clause dedicated to establishing our Intellectual Property Rights.</p>
 
             <br>
-
-            <span>A) Lorem ipsum dolor sit amet</span>
-            <h5>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, iure.</h5>
+            <h5>3. Pricing and Payment Terms</h5>
             <br>  
-            <p>Fusce nec ultrices lectus. Duis nec scelerisque risus. Ut id tempor turpis, ac dignissim ipsum. Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem. Pellentesque in sagittis lacus, vel auctor sem. Quisque eu quam eleifend, ullamcorper dui nec, luctus quam.</p>
+            <p>Product prices are almost always subject to change, and our right to make these changes should be established in a dedicated Pricing or Payments clause. Other details of customer transactions, such as shipping, returns, refunds and discounts also should be addressed in this clause in order to give you the legal rights to manage these matters in the interest of your online store.</p>
 
             <br>
-
-            <span>A) Lorem ipsum dolor sit amet</span>
-            <h5>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, iure.</h5>
+            <h5>4. Dispute Resolution</h5>
             <br>  
-            <p>Fusce nec ultrices lectus. Duis nec scelerisque risus. Ut id tempor turpis, ac dignissim ipsum. Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem. Pellentesque in sagittis lacus, vel auctor sem. Quisque eu quam eleifend, ullamcorper dui nec, luctus quam.</p>
+            <p> This clause typically establishes the jurisdiction where any disputes will be arbitrated if it comes to that, and the governing law that will apply. Obviously, these decisions should be made in the interest of the store's owner.This clause is particularly important for ecommerce stores that cater to a global audience. Different countries have different laws which could impact the outcome of any dispute.</p>
 
             <br>  
             <br>  
