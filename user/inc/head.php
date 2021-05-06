@@ -13,13 +13,11 @@
                             <div class="header-button">
                                 <div class="noti-wrap">
                                     <div class="noti__item js-item-menu">
-                                        
                                    <?php
                                        if(!empty($_SESSION["shopping_cart"])) {
                                         $cart_count = count(array_keys($_SESSION["shopping_cart"]));
                                     ?>
-                                    <a href="cart.php"><i class="zmdi zmdi-shopping-cart"></i><span class="quantity"><?php echo $cart_count; ?></span>
-                                    </a>
+                                  <button onclick="window.location.href='chart.php'"><i class="zmdi zmdi-shopping-cart"></i><span class="quantity"><?php echo $cart_count; ?></span></button>
                                      <?php
                                     }
                                     ?>
