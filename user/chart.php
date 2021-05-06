@@ -9,6 +9,7 @@ if(!empty($_SESSION["shopping_cart"])) {
 	foreach($_SESSION["shopping_cart"] as $key => $value) {
 		if($_POST["code"] == $key){
 		unset($_SESSION["shopping_cart"][$key]);
+        
 		$status = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
         <strong>Product is remove from your chart!</strong> 
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -108,7 +109,7 @@ if (isset($_GET['logout'])) {
                         </li>
                         <li class="active">
                             <a href="chart.php">
-                                <i class="fas fa-chart-bar"></i>Checkout</a>
+                                <i class="fas fa-chart-bar"></i>Your cart</a>
                         </li>
                         <li>
                             <a href="chart.php">
@@ -133,7 +134,7 @@ if (isset($_GET['logout'])) {
                     <div class="container-fluid">
                         
                             <div>
-                                <a href="index.php" class="btn btn-success"> < Continue shopping </a>
+                                <a href="index.php" class="btn btn-primary"> < Continue shopping </a>
                             </div>
                             <div class="row m-t-30 justify-content-center">
                                 <div class="col-md-12">
@@ -188,16 +189,32 @@ if (isset($_GET['logout'])) {
                                                         </form>
                                                     </td>
                                                 </tr>	
-                                                        <?php
+                                                      
+                                                      <?php
                                                         $total_price += ($product["price"]*$product["quantity"]);
                                                         }
                                                         ?>
 
                                                 <tr>
-
-                                                   <td colspan="6" class="text-right">
-                                                      <strong style="margin-right:260px;" >TOTAL:&nbsp;&nbsp; <?php echo "$ ".$total_price; ?> </strong>
+                                                   <td></td>
+                                                   <td></td>
+                                                   <td></td>
+                                                   <td></td>
+                                                   <td>
+                                                      <strong >TOTAL:&nbsp;&nbsp; <?php echo "$ ".$total_price; ?> </strong>
                                                     </td>
+                                                   <td></td> 
+                                               </tr>
+
+                                               <tr>
+                                                   <td></td>
+                                                   <td></td>
+                                                   <td></td>
+                                                   <td></td>
+                                                   <td></td>
+                                                   <td> 
+                                                       <button type="submit"  class="btn btn-success"> Checkout</button>
+                                                   </td>
                                                </tr>
                                                 <tr>
 

@@ -70,7 +70,17 @@ include_once('./inc/addchart.php');
             <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
-                
+                        <!-- <div class="row">
+                            <div class="col-md-12">
+                                <div class="overview-wrap" style="margin-top:-5px;">
+                                    <h2 class="title-1">Feature Products</h2>
+                                    <button class="au-btn au-btn-icon au-btn--blue">
+                                        <i class="zmdi zmdi-plus"></i>add item</button>
+                                </div>
+                            </div>
+                        </div> -->
+                       
+ 
                         <div class="row m-t-25">
 
                             <?php
@@ -87,7 +97,11 @@ include_once('./inc/addchart.php');
 
                                 <div class="card">
                                     <img class="card-img-top" src="<?php echo $row['image'];?>" alt="Card image cap">
+<<<<<<< HEAD
                                     <div class="card-body h-100">
+=======
+                                    <div class="card-body text-center">
+>>>>>>> 6fe8a6d9eab710c3547ac5993de55e591bb52153
                                        <form action="" method="post">
                                            <input type='hidden' name='code' value = "<?php echo $row['code']; ?>" />
                                            <h4 class="card-title mb-3 text-center" ><?php echo $row['name'];?></h4>
@@ -97,16 +111,16 @@ include_once('./inc/addchart.php');
                                                </span>
                                            </div>
                                            <div class='product-rating text-center'>
-                                                <em>RATING</em>&nbsp;&nbsp;
-                                                <i class='fa fa-star'></i>
-                                                <i class='fa fa-star'></i>
-                                                <i class='fa fa-star'></i>
-                                                <i class='fa fa-star'></i>
-                                                <i class='fa fa-star'></i>
+                                                <em ></em>&nbsp;&nbsp;
+                                                <i class='fa fa-star' style="color:red;"></i>
+                                                <i class='fa fa-star' style="color:orange;"></i>
+                                                <i class='fa fa-star' style="color:yellow;"></i>
+                                                <i class='fa fa-star' style="color:green;"></i>
+                                                <i class='fa fa-star' style="color:blue;"></i>
                                            </div>
                                            <p class="card-text">
                                            </p>
-                                           <button type="submit" id="cart-btn" class="btn btn-primary mt-1">Add to cart</button>
+                                           <button type="submit" id="cart-btn" class="btn btn-success mt-1">Add to cart</button>
                                         </form>
                                     </div>
                                 </div>   
