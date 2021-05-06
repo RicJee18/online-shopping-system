@@ -13,9 +13,16 @@
                             <div class="header-button">
                                 <div class="noti-wrap">
                                     <div class="noti__item js-item-menu">
-                                        <i class="zmdi zmdi-shopping-cart"></i>
-                                        <span class="quantity">1</span>
                                         
+                                   <?php
+                                       if(!empty($_SESSION["shopping_cart"])) {
+                                        $cart_count = count(array_keys($_SESSION["shopping_cart"]));
+                                    ?>
+                                    <a href="cart.php"><i class="zmdi zmdi-shopping-cart"></i><span class="quantity"><?php echo $cart_count; ?></span>
+                                    </a>
+                                     <?php
+                                    }
+                                    ?>
                                         <!-- <div class="mess-dropdown js-dropdown">
                                             <div class="mess__title">
                                                 <p>You have 2 news message</p>
@@ -81,10 +88,7 @@
                                                     <a href="#">
                                                         <i class="zmdi zmdi-settings"></i>Setting</a>
                                                 </div>
-                                                <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
-                                                </div>
+
                                             </div>
                                             <div class="account-dropdown__footer">
                                                 <a href="index.php?logout='1'">
