@@ -83,20 +83,20 @@ include_once('./inc/addchart.php');
                             
                             ?>
 
-                            <div class="col-sm-6 col-lg-3">
+                            <div class="col-sm-6 mb-4 col-lg-3 mx-auto">
 
-                                <div class="card">
-                                    <img class="card-img-top" src="<?php echo $row['image'];?>" alt="Card image cap">
-                                    <div class="card-body text-center">
-                                       <form action="" method="post">
+                                <div class="card mb-4 h-100 mx-auto">
+                                    <img class="card-img-top mt-2 h-100" src="<?php echo $row['image'];?>" alt="Card image cap">
+                                    <div class="card-body mx-auto justify-content-center ">
+                                       <form action="" method="post" class="mx-auto">
                                            <input type='hidden' name='code' value = "<?php echo $row['code']; ?>" />
                                            <h4 class="card-title mb-3 text-center" ><?php echo $row['name'];?></h4>
                                            <div style="margin-bottom:10px;" class="text-center">
                                                <span>
-                                                  <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup><?php echo $row['price'];?>
+                                                  <del><sup>Php</sup>1999 </del> &nbsp; <sup>Php</sup><?php echo $row['price'];?>
                                                </span>
                                            </div>
-                                           <div class='product-rating text-center'>
+                                           <div class='product-rating text-center '>
                                                 <em ></em>&nbsp;&nbsp;
                                                 <i class='fa fa-star' style="color:red;"></i>
                                                 <i class='fa fa-star' style="color:orange;"></i>
@@ -106,7 +106,7 @@ include_once('./inc/addchart.php');
                                            </div>
                                            <p class="card-text">
                                            </p>
-                                           <button type="submit" id="cart-btn" class="btn btn-success mt-1">Add to cart</button>
+                                           <button type="submit" id="cart-btn" class="btn ml-3 btn-success  mt-1">Add to cart</button>
                                         </form>
                                     </div>
                                 </div>   
