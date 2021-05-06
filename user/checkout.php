@@ -187,7 +187,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                       <?php
                         }
                         else{
-                          echo "<h3>Your cart is empty!</h3>";
+                          echo '<center><div class="alert alert-success" role="alert" Your chart idss empty !</div></center>';
                         }
                       ?>
                       

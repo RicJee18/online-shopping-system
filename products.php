@@ -1,8 +1,3 @@
-<?php
-
-include_once('./inc/addchart.php');
-
-?>
 
 <body>
 
@@ -72,62 +67,7 @@ include_once('./inc/addchart.php');
 
     <div class="services">
       <div class="container">
-        <div class="row mt-1">
-
-
-        <?php
         
-            $result = mysqli_query($con,"SELECT * FROM `products`");
-
-            while($row = mysqli_fetch_assoc($result))
-      
-           { 
-        
-        ?>
-           
-
-           <div class="col-md-4">
-            <div class="service-item">
-              <img src="<?php echo $row['image'];?>" alt=""   width="250" height="400" >
-              <div class="down-content">
-                <form action="" method="post">
-                  <input type='hidden' name='code' value = "<?php echo $row['code']; ?>" />
-                  <h4 class="text-center"><?php echo $row['name'];?></h4>
-                  <div style="margin-bottom:10px;" class="text-center">
-                    <span>
-                      <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup><?php echo $row['price'];?>
-                    </span>
-                  </div>
-                  <div class='product-rating text-center'>
-                    <em>RATING</em>&nbsp;&nbsp;
-                    <i class='fa fa-star'></i>
-                    <i class='fa fa-star'></i>
-                    <i class='fa fa-star'></i>
-                    <i class='fa fa-star'></i>
-                    <i class='fa fa-star'></i>
-                  </div>
-                  <br>
-                  <button type="submit" id="cart-btn" class="btn">Buy Now</button>
-                </form>
-              </div>
-            </div>
-
-            <br>
-          </div>
-
-
-        <?php
-
-           }
-
-           mysqli_close($con);         
-
-        ?>
-
-      </div>
-
-      <br>
-      <br>
       </div>
     </div>
 
