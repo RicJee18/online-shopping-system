@@ -97,11 +97,7 @@ include_once('./inc/addchart.php');
 
                                 <div class="card">
                                     <img class="card-img-top" src="<?php echo $row['image'];?>" alt="Card image cap">
-<<<<<<< HEAD
                                     <div class="card-body h-100">
-=======
-                                    <div class="card-body text-center">
->>>>>>> 6fe8a6d9eab710c3547ac5993de55e591bb52153
                                        <form action="" method="post">
                                            <input type='hidden' name='code' value = "<?php echo $row['code']; ?>" />
                                            <h4 class="card-title mb-3 text-center" ><?php echo $row['name'];?></h4>
