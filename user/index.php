@@ -97,13 +97,13 @@ include_once('./inc/addchart.php');
 
                                 <div class="card">
                                     <img class="card-img-top" src="<?php echo $row['image'];?>" alt="Card image cap">
-                                    <div class="card-body text-center">
+                                    <div class="card-body h-100">
                                        <form action="" method="post">
                                            <input type='hidden' name='code' value = "<?php echo $row['code']; ?>" />
                                            <h4 class="card-title mb-3 text-center" ><?php echo $row['name'];?></h4>
                                            <div style="margin-bottom:10px;" class="text-center">
                                                <span>
-                                                  <del><sup>$</sup>1999 </del> &nbsp; <sup>$</sup><?php echo $row['price'];?>
+                                                  <del><sup>Php</sup>1999 </del> &nbsp; <sup>Php</sup><?php echo $row['price'];?>
                                                </span>
                                            </div>
                                            <div class='product-rating text-center'>
