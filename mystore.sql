@@ -53,7 +53,8 @@ CREATE TABLE `product` (
 
 --
 -- Dumping data for table `product`
---
+-- --
+-- inserting data to the table
 
 INSERT INTO `product`(`id`, `name`, `code`, `price`, `image`) VALUES
 (1, 'Vivo V9', 'vivo01', 14999.00, '../product-images/vivo-img/V9 14999.png'),
