@@ -30,13 +30,14 @@ include_once('./inc/addchart.php');
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Charts</title>
+    <title>RJJ Mobile Store</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- Bootstrap CSS-->
     <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
@@ -70,17 +71,7 @@ include_once('./inc/addchart.php');
             <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
-                        <!-- <div class="row">
-                            <div class="col-md-12">
-                                <div class="overview-wrap" style="margin-top:-5px;">
-                                    <h2 class="title-1">Feature Products</h2>
-                                    <button class="au-btn au-btn-icon au-btn--blue">
-                                        <i class="zmdi zmdi-plus"></i>add item</button>
-                                </div>
-                            </div>
-                        </div> -->
-                       
- 
+            
                         <div class="row m-t-25">
 
                             <?php
@@ -116,7 +107,7 @@ include_once('./inc/addchart.php');
                                            </div>
                                            <p class="card-text">
                                            </p>
-                                           <button type="submit" id="cart-btn" class="btn ml-3 btn-success  mt-1">Add to cart</button>
+                                           <button type="submit" id="cart-btn" name= "added" class="btn ml-3 btn-success  mt-1">Add to cart</button>
                                         </form>
                                     </div>
                                 </div>   
@@ -169,6 +160,17 @@ include_once('./inc/addchart.php');
 
     <!-- Main JS-->
     <script src="js/main.js"></script>
+
+    
+<script>
+
+<?php
+if(isset($_POST['added'])){
+?>
+swal("Successfully", "Added To Your Cart!", "success");
+
+<?php }?>
+</script>
 
 </body>
 

@@ -3,13 +3,16 @@
 session_start();
 
 $status="";
+$swal= "";
 
 if (isset($_POST['action']) && $_POST['action']=="remove"){
 if(!empty($_SESSION["shopping_cart"])) {
 	foreach($_SESSION["shopping_cart"] as $key => $value) {
 		if($_POST["code"] == $key){
 		unset($_SESSION["shopping_cart"][$key]);
-        
+
+        $swal= "<script>swal('Successfully!', 'Remove To Your Cart!', 'success');</script>";
+
 		$status = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
         <strong>Product is remove from your chart!</strong> 
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -66,6 +69,7 @@ if (isset($_GET['logout'])) {
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- Bootstrap CSS-->
     <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
@@ -137,6 +141,10 @@ if (isset($_GET['logout'])) {
                                 <a href="index.php" class="btn btn-primary"> < Continue shopping </a>
                             </div>
                             <div class="row m-t-30 justify-content-center">
+                            <?php
+                            if (isset($_GET['msg1']) == "insert") {
+                            echo "<script>swal('Checkout Successfully!', 'Your order is now pending.Thank you!', 'success');</script>";
+                            } ?>;
                                 <div class="col-md-12">
                                         <?php
                                             if(isset($_SESSION["shopping_cart"])){
@@ -192,8 +200,7 @@ if (isset($_GET['logout'])) {
                                                       
                                                       <?php
                                                         $total_price += ($product["price"]*$product["quantity"]);
-                                                        }
-                                                        ?>
+                                                        }?>
 
                                                 <tr>
                                                    <td></td>
@@ -213,9 +220,14 @@ if (isset($_GET['logout'])) {
                                                    <td></td>
                                                    <td></td>
                                                    <td> 
-                                                       <button type="submit"  class="btn btn-success"> Checkout</button>
+                                                       <a href="checkout.php"  class="btn btn-success">Checkout</a>
                                                    </td>
+                                                    
                                                </tr>
+                                             
+
+                                               
+
                                                 <tr>
 
                                                  <?php
@@ -226,6 +238,7 @@ if (isset($_GET['logout'])) {
                                                 ?>
                                                 </tr>
                                                 <tr>
+                                                    <?php echo $swal; ?>;
                                                     <?php echo $status; ?>
                                                 </tr>
                                         
