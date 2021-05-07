@@ -37,6 +37,7 @@ include_once('./inc/addchart.php');
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- Bootstrap CSS-->
     <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
@@ -106,7 +107,7 @@ include_once('./inc/addchart.php');
                                            </div>
                                            <p class="card-text">
                                            </p>
-                                           <button type="submit" id="cart-btn" class="btn ml-3 btn-success  mt-1">Add to cart</button>
+                                           <button type="submit" id="cart-btn" name= "added" class="btn ml-3 btn-success  mt-1">Add to cart</button>
                                         </form>
                                     </div>
                                 </div>   
@@ -159,6 +160,17 @@ include_once('./inc/addchart.php');
 
     <!-- Main JS-->
     <script src="js/main.js"></script>
+
+    
+<script>
+
+<?php
+if(isset($_POST['added'])){
+?>
+swal("Successfully", "Added To Your Cart!", "success");
+
+<?php }?>
+</script>
 
 </body>
 
