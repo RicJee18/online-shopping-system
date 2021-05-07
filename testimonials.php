@@ -7,7 +7,7 @@
       include_once('./inc/header.php');
       include_once('./inc/sub-header.php');
     ?>
-    
+    <!-- Navigation -->
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
@@ -47,7 +47,7 @@
       </nav>
     </header>
 
-    <!-- Page Content -->
+    <!-- Testimonials -->
     <div class="page-heading header-text">
       <div class="container">
         <div class="row">
@@ -87,8 +87,8 @@
         </div>
       </div>
     </div>
-
-    <?php include_once('./inc/footer.php'); ?>
+    <!-- footer -->
+    <?php include_once('./inc/footer.php'); ?> 
 
   </body>
 </html>

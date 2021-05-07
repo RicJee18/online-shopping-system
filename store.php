@@ -1,5 +1,5 @@
 <?php
-
+// create class store
 class MyStore {
 
     private $server = "mysql:host=localhost;dbname=mystore";
@@ -13,7 +13,7 @@ class MyStore {
     );
 
     protected $connection;
-
+// connection
     public function openConnection(){
 
         try {
@@ -37,13 +37,13 @@ class MyStore {
         }
 
     }
-
+// close connection
     public function closeConnection(){
 
         $this->$connection = 0;
         
     }
-
+// // function that catch data during access the users
     public function getUsers(){
 
         $connection = $this->openConnection();
@@ -61,7 +61,7 @@ class MyStore {
 
     } //end getUser
 
-
+// function that catch data during login
     public function login(){
 
         session_start();
@@ -88,7 +88,7 @@ class MyStore {
             }
         }
     }
-
+// function that catch data during register
     public function register(){
          
         session_start();
@@ -126,7 +126,7 @@ class MyStore {
         }
     }
 }
-
+// initialize new object
 $mystore = new MyStore();
 
 ?>

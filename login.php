@@ -11,8 +11,8 @@ include_once('./inc/header.php');
             <div class="col-lg-6">
                 <div class="card1 pb-5">
                     <div class="row">
-                    <a href="index.php"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</a> <img src="https://i.imgur.com/CXQmsmF.png" class="logo"> </div>
-                    <div class="row px-3 justify-content-center mt-4 mb-5 border-line"><img src="https://i.imgur.com/uNGdWHi.png" class="image"> </div>
+                    <a href="index.php"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</a> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs7-VtDu2rTDjaiiFo-pFPIO0CKRx03qXUkw&usqp=CAU" class="logo"> </div>
+                    <div class="row px-3 justify-content-center mt-4 mb-5 border-line"><img src="https://alexwebdevelop.com/wp-content/uploads/2019/08/php-login-and-authentication-the-definitive-guide.png" class="image"> </div>
                 </div>
             </div>
             

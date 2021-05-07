@@ -33,6 +33,7 @@ SET time_zone = "+00:00";
 --
 -- Dumping data for table `customer`
 --
+-- create table customer
 CREATE TABLE `customers` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
