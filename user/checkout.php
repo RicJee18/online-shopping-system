@@ -1,327 +1,303 @@
 <?php
 
 session_start();
+$swal= "";
+$errors = array();
 
-$status="";
-
-if (isset($_POST['action']) && $_POST['action']=="remove"){
-if(!empty($_SESSION["shopping_cart"])) {
-	foreach($_SESSION["shopping_cart"] as $key => $value) {
-		if($_POST["code"] == $key){
-		unset($_SESSION["shopping_cart"][$key]);
-		$status = "<div class='box' style='color:red;'>
-		Product is removed from your cart!</div>";
-		}
-		if(empty($_SESSION["shopping_cart"]))
-		unset($_SESSION["shopping_cart"]);
-			}		
-		}
+if(!isset($_SESSION['username'])){
+    header('location:../login.php');
+    exit;
 }
 
-if (isset($_POST['action']) && $_POST['action']=="change"){
-  foreach($_SESSION["shopping_cart"] as &$value){
-    if($value['code'] === $_POST["code"]){
-        $value['quantity'] = $_POST["quantity"];
-        break; // Stop the loop after we've found the product
+if (isset($_GET['logout'])) {
+    unset($_SESSION['username']);
+    header("location: ../login.php");
+}
+
+include_once('./inc/addchart.php');
+include_once('./inc/db.php');
+
+if(isset($_POST['submit'])){
+  if(!empty($_SESSION['shopping_cart'])){
+
+      unset($_SESSION['shopping_cart']);
+      // $swal = "<script>swal('Checkout Successfully!', 'Successfully!', 'success')</script>";
+    
+      // receive all input values from the form
+      $fname = mysqli_real_escape_string($db, $_POST['fname']);
+      $lname = mysqli_real_escape_string($db, $_POST['lname']);
+      $location = mysqli_real_escape_string($db, $_POST['location']);
+      $contact = mysqli_real_escape_string($db, $_POST['contact']);
+      $email = mysqli_real_escape_string($db, $_POST['email']);
+      $payment = mysqli_real_escape_string($db, $_POST['payment']);
+      
+      // form validation: ensure that the form is correctly filled ...
+      // by adding (array_push()) corresponding error unto $errors array
+    
+      if (empty($fname)) { array_push($errors, "*firstname is required"); }
+      if (empty($lname)) { array_push($errors, "*Lastname is required"); }
+      if (empty($location)) { array_push($errors, "*Location is required"); }
+      if (empty($contact)) { array_push($errors, "*Contact is required"); }
+      if (empty($email)) { array_push($errors, "*Email phone is required"); }
+      if (empty($payment)) { array_push($errors, "*Payment is required"); }
+     
+    
+      // Finally, register user if there are no errors in the form
+      if (count($errors) == 0) {
+        //  session_destroy($_SESSION['shopping_cart']);
+        $query = "INSERT INTO `customer`(`name`, `lastname`, `location`, `contact`, `email`, `payment`) VALUES ('$fname','$lname','$location','$contact','$email','$payment')";
+        mysqli_query($db, $query);
+        header('location:chart.php?msg1=insert');
+        
+       }
     }
   }
-  	
-}
 
 ?>
 
-  <body>
 
-  <?php
 
-  // Preloader Start 
-  include_once('./inc/header.php');
+<!DOCTYPE html>
+<html lang="en">
 
-  //header 
-  include_once('./inc/preloader.php');
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
 
-  //sub-header
-  include_once('./inc/sub-header.php');
+    <!-- Title Page-->
+    <title>Charts</title>
 
-?>
-    
-    <header class="">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>RJJ Mobile<em> &nbsp;Shop</em></h2></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link " href="index.php">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="products.php">Products</a>
-              </li>
-              <li class="nav-item active">
-                   <a class="nav-link" href="checkout.php">Checkout</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-              
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="about.php">About Us</a>
-                    <a class="dropdown-item" href="blog.php">Blog</a>
-                    <a class="dropdown-item" href="testimonials.php">Testimonials</a>
-                    <a class="dropdown-item" href="terms.php">Terms</a>
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+</head>
+      
+        <?php  
+            include_once('./inc/head.php');
+        ?>
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+
+           
+            <!-- MENU SIDEBAR-->
+            <aside class="menu-sidebar d-none d-lg-block">
+                <div class="logo">
+                    <a href="#">
+                        <img src="images/icon/logo.png" alt="Cool Admin" />
+                    </a>
                 </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.php">Contact Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="mt-1 btn btn-success" href="login.php">Sign In</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+                <div class="menu-sidebar__content js-scrollbar1">
+                    <nav class="navbar-sidebar">
+                        <ul class="list-unstyled navbar__list">
+                            <li class="has-sub">
+                                <!-- <button class="js-arrow" onclick="window.location.href='index.php'"><i class="fas fa-tachometer-alt"></i>Shop</button> -->
+                                <a href="index.php">
+                                    <i class="fas fa-tachometer-alt"></i>Shop</a>
+                              
+                            </li>
+                            <li class="active">
+                                <a href="chart.php">
+                                    <i class="fas fa-chart-bar"></i>Your cart</a>
+                            </li>
+                            <li>
+                                <a href="chart.php">
+                                    <i class="fas fa-table"></i>Your Profile</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+            <!-- END MENU SIDEBAR-->
 
 
-
-    <!-- Page Content -->
-    <div class="page-heading header-text">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1>Checkout</h1>
-            <span>"Be WISE, Shop WISE"<br><br>PAY as you ORDER!</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="contact-information">
-      <div class="container">
-        <div>
-          <a href="products.php" class="btn btn-primary"> < Continue shopping </a>
-        </div>
-        <br>
-
-        <ul class="list-group list-group-flush">
-
-          <li class="list-group-item">
-
-              <div class="row">
-
-                  <?php
-                    if(isset($_SESSION["shopping_cart"])){
-                      $total_price = 0;
-                  ?>	
-
-                 <div class="table">
-                   <table class="table table-striped">
-                      <thead>
-                              <tr>
-                                <td></td>
-                                <td>ITEM NAME</td>
-                                <td>QUANTITY</td>
-                                <td>ACTIONS</td>
-                                <td>UNIT PRICE</td>
-                                <td>ITEMS TOTAL</td>
-                                
-                              </tr>   
-                      </thead>
-                      <tbody>
-                        <tr>
-                            <?php		
-                            foreach ($_SESSION["shopping_cart"] as $product){
-                            ?>
-
-                            <td><img src='<?php echo $product["image"]; ?>' width="50" height="40" /></td>
-                            <td><?php echo $product["name"]; ?><br/>
-
-                            <td>
-                              <form method='post' action=''>
-                                <input type='hidden' name='code' value="<?php echo $product["code"]; ?>" />
-                                <input type='hidden' name='action' value="change" />
-                                  <select name='quantity' class='quantity form-control w-50 text-center' onchange="this.form.submit()">
-                                    <option <?php if($product["quantity"]==1) echo "selected";?> value="1">1</option>
-                                    <option <?php if($product["quantity"]==2) echo "selected";?> value="2">2</option>
-                                    <option <?php if($product["quantity"]==3) echo "selected";?> value="3">3</option>
-                                    <option <?php if($product["quantity"]==4) echo "selected";?> value="4">4</option>
-                                    <option <?php if($product["quantity"]==5) echo "selected";?> value="5">5</option>
-                                  </select>
-                              </form>
-                          </td>
-                          <td>
-                            <form method='post' action=''>
-                              <input type='hidden' name='code' value="<?php echo $product["code"]; ?>" />
-                              <input type='hidden' name='action' value="remove" />
-                              <button type='submit' class='remove btn btn-danger'>Remove</button>
-                            </form>
-                          </td>
-                          <td>
-                            <?php echo "$".$product["price"]; ?>
-                          </td>
-                          <td>
-                            <?php echo "$".$product["price"]*$product["quantity"]; ?>
-                          </td>
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                       
+                        <div class="row m-t-0">
                           
+                          <div class="mb-3 ml-4">
+                             <a href="index.php" class="btn btn-primary"> < Continue shopping </a>
+                         </div>
+                          <div class="col-md-12">
+                            <div class="card-deck">
 
-                        </tr>	
-                            <?php
-                              $total_price += ($product["price"]*$product["quantity"]);
-                            }
-                            ?>
+                              <div class="col-md-6">
+                                <div class="card">
+                                <div class="card-header">
+                                  <h3>Checkout Products</h3>
+                                </div>
+                                    <div class="card-body">
+                                    <?php include 'error.php'; ?>
+                                      <form method="POST">
+                                        <div class="form-row">
+                                          <div class="form-group col-md-6">
+                                            <label for="inputEmail4">Firstname</label>
+                                            <input type="text" name='fname' class="form-control" id="inputEmail4" placeholder="" >
+                                          </div>
+                                          <div class="form-group col-md-6">
+                                            <label for="inputPassword4">Lastname</label>
+                                            <input type="text" name="lname" class="form-control" id="inputPassword4" placeholder="">
+                                          </div>
+                                        </div>
+                                        <div class="form-row">
+                                          <div class="form-group col-md-6">
+                                            <label for="inputEmail4">Location</label>
+                                            <input type="text" name="location" class="form-control" id="inputEmail4" placeholder="">
+                                          </div>
+                                          <div class="form-group col-md-6">
+                                            <label for="inputPassword4">Contact Number</label>
+                                            <input type="text" name="contact" class="form-control" id="inputPassword4" placeholder="">
+                                          </div>
+                                        </div>
+                                        <div class="form-row">
+                                          <div class="form-group col-md-6">
+                                            <label for="inputCity">Email</label>
+                                            <input type="email" name="email" class="form-control" id="inputCity" >
+                                          </div>
+                                          <div class="form-group col-md-6">
+                                            <label for="inputState">Payment</label>
+                                            <select id="inputState" name="payment" class="form-control">
+                                              <option selected>Cash on Delivery</option>
+                                              <option>GCASH</option>
+                                            </select>
+                                          </div>
+                                          
+                                        </div>
+                                        <div class="form-group">
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                                            <label class="form-check-label" for="gridCheck">
+                                              Check me out
+                                            </label>
+                                          </div>
+                                        </div>
+                                       
+                                        <button type="submit" name="submit" class="btn btn-success">
+                                          Checkout Now
+                                        </button>
+                                        <?php echo $swal;?>
+                                      </form>   
+                                  </div>
+                                  </div>
+                                </div>
+                            
+                            <div class="card">
+                           
+                              <!-- <div class="col-md-19"> -->
+                                  
+                                        <?php
+                                            if(isset($_SESSION["shopping_cart"])){
+                                            $total_price = 0;
+                                        ?>	
+                                    <!-- DATA TABLE-->
+                                    <div class="table-sm-responsive">
+                                        <table class="table table-sm table-borderless table-data3">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Qty</th>
+                                                    <th>Unit Price</th>
+                                                    <th>Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <?php		
+                                                        foreach ($_SESSION["shopping_cart"] as $product){
+                                                    ?>
+                                                    
+                                                    <td><?php echo $product["name"]; ?></td>
+                                                    <td><?php echo $product["quantity"]; ?></td>
+                                                    <td><?php echo "$".$product["price"]; ?></td>
+                                                    <td><?php echo "$".$product["price"]*$product["quantity"]; ?></td>
+                                                </tr>	
+                                                      
+                                                      <?php
+                                                        $total_price += ($product["price"]*$product["quantity"]);}
+                                                        ?>
 
-                          <tr>
+                                                <tr>
+                                                   <td></td>
+                                                   <td></td>
+                                                   <td><strong><?php ?>TOTAL: </strong></td>
+                                                   <td>
+                                                      <?php echo "$".$total_price;}?>
+                                                    </td>
+                                            
+                                               </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                  </div>
 
-                            <td colspan="6" class="text-right">
-                              <strong style="margin-right:120px;" >TOTAL:&nbsp;&nbsp; <?php echo "$ ".$total_price; ?> </strong>
-                            </td>
-                          </tr>
-                        </tbody>
-                     </table>
-                      
-                      <?php
-                        }
-                        else{
-                          echo '<center><div class="alert alert-success" role="alert" Your chart idss empty !</div></center>';
-                        }
-                      ?>
-                      
-                      <div style="clear:both;"></div>
-
-                      <div class="message_box" style="margin:10px 0px;">
-                          <?php echo $status; ?>
-                      </div>
-                      
+                                </div>
+                            </div>
+                            </div>
 
                      
-
-                  </div>
+                        </div>
+                        </div>
+                        
+                    </div>
                 </div>
-                
-              </div>
-            </li>
-        </ul>
-      </div>  
-    </div>
-
-    <div class="callback-form contact-us">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="contact-form">
-              <form action="#" id="contact">
-                 <div class="row">
-                      <div class="col-sm-6 col-xs-12">
-                           <div class="form-group">
-                                <select class="form-control" data-msg-required="This field is required.">
-                                     <option value="">-- Choose Title --</option>
-                                     <option value="dr">Dr.</option>
-                                     <option value="miss">Miss</option>
-                                     <option value="mr">Mr.</option>
-                                     <option value="mrs">Mrs.</option>
-                                     <option value="ms">Ms.</option>
-                                     <option value="other">Other</option>
-                                     <option value="prof">Prof.</option>
-                                     <option value="rev">Rev.</option>
-                                </select>
-                           </div>
-                      </div>
-                      <div class="col-sm-6 col-xs-12">
-                           <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Name:">
-                           </div>
-                      </div>
-                 </div>
-                 <div class="row">
-                      <div class="col-sm-6 col-xs-12">
-                           <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Email:">
-                           </div>
-                      </div>
-                      <div class="col-sm-6 col-xs-12">
-                           <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Phone:">
-                           </div>
-                      </div>
-                 </div>
-                 <div class="row">
-                      <div class="col-sm-6 col-xs-12">
-                           <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Address 1:">
-                           </div>
-                      </div>
-                      <div class="col-sm-6 col-xs-12">
-                           <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Address 2:">
-                           </div>
-                      </div>
-                 </div>
-                 <div class="row">
-                      <div class="col-sm-6 col-xs-12">
-                           <div class="form-group">
-                                <input type="text" class="form-control" placeholder="City:">
-                           </div>
-                      </div>
-                      <div class="col-sm-6 col-xs-12">
-                           <div class="form-group">
-                                <input type="text" class="form-control" placeholder="State:">
-                           </div>
-                      </div>
-                 </div>
-                 <div class="row">
-                      <div class="col-sm-6 col-xs-12">
-                           <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Zip:">
-                           </div>
-                      </div>
-                      <div class="col-sm-6 col-xs-12">
-                           <div class="form-group">
-                                <select class="form-control">
-                                     <option value="">-- Choose Country --</option>
-                                     <option value="">-- Choose --</option>
-                                     <option value="">-- Choose --</option>
-                                     <option value="">-- Choose --</option>
-                                </select>
-                           </div>
-                      </div>
-                 </div>
-
-                 <div class="row">
-                      <div class="col-sm-6 col-xs-12">
-                           <div class="form-group">
-                                <select class="form-control">
-                                     <option value="">-- Choose Payment method --</option>
-                                     <option value="bank">Bank account</option>
-                                     <option value="cash">Cash</option>
-                                     <option value="paypal">PayPal</option>
-                                </select>
-                           </div>
-                      </div>
-
-                      <div class="col-sm-6 col-xs-12">
-                           <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Captcha">
-                           </div>
-                      </div>
-                 </div>
-
-                 <div class="row">
-                   <div class="col-lg-12">
-                      <button type="submit" id="form-submit" class="filled-button">Finish</button>
-                  </div>
-                 </div>
-              </form>
-
             </div>
-          </div>
+            <!-- END MAIN CONTENT-->
+            <!-- END PAGE CONTAINER-->
         </div>
-      </div>
+
     </div>
-   <?php include_once('./inc/footer.php'); ?>
-  </body>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+</body>
+
 </html>
+<!-- end document-->
