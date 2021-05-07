@@ -28,7 +28,12 @@ SET time_zone = "+00:00";
 -- Table structure for table `customer`
 --
 
-CREATE TABLE `customer` (
+
+
+--
+-- Dumping data for table `customer`
+--
+CREATE TABLE `customers` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `lastname` varchar(255) NOT NULL,
@@ -38,32 +43,14 @@ CREATE TABLE `customer` (
   `payment` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `customer`
---
 
-INSERT INTO `customer` (`id`, `name`, `lastname`, `location`, `contact`, `email`, `payment`) VALUES
-(1, 'april', 'mulaag mi ig going home sa ilaha', 'dalaguete', '09123456789', 'april@gmail.com', 'Cash on Delivery'),
-(2, 'april', 'mulaag mi ig going home sa ilaha', 'dalaguete', '09123456789', 'jurick@gmail.com', 'Cash on Delivery'),
-(3, 'april', 'mulaag mi ig going home sa ilaha', 'dalaguete', '09123456789', 'jericbaternakho@gmail.com', 'GCASH'),
-(4, 'april', 'mulaag mi ig going home sa ilaha', 'dalaguete', '09123456789', 'april@gmail.com', 'GCASH'),
-(5, 'Ric Jee', 'Baterna', 'Medellin', '09123456789', 'jericbaternakho@gmail.com', 'GCASH'),
-(6, 'april', 'mulaag mi ig going home sa ilaha', 'dalaguete', '09123456789', 'jurick@gmail.com', 'Cash on Delivery'),
-(7, 'Ric Jee', 'mulaag mi ig going home sa ilaha', 'dalaguete', '09123456789', 'jurick@gmail.com', 'Cash on Delivery'),
-(8, 'april', 'mulaag mi ig going home sa ilaha', 'dalaguete', '09123456789', 'april@gmail.com', 'GCASH'),
-(9, 'James Aldrin ', 'Bugoon', 'Asturias', '09123456789', 'jericbaternakho@gmail.com', 'GCASH'),
-(10, 'Ric Jee', 'mulaag mi ig going home sa ilaha', 'dalaguete', '09123456789', 'gfh@com', 'GCASH'),
-(11, 'James Aldrin ', 'Baterna', 'Medellin', '8080', 'jericbaternakho@gmail.com', 'GCASH'),
-(12, 'april', 'mulaag mi ig going home sa ilaha', 'dalaguete', '09123456789', 'gfh@com', 'GCASH'),
-(13, 'Ric Jee', 'Baterna', 'dalaguete', '09123456789', 'jurick@gmail.com', 'Cash on Delivery'),
-(14, 'april', 'mulaag mi ig going home sa ilaha', 'dalaguete', '09123456789', 'april@gmail.com', 'Cash on Delivery'),
-(15, 'april', 'mulaag mi ig going home sa ilaha', 'dalaguete', '09123456789', 'april@gmail.com', 'Cash on Delivery'),
-(16, 'april', 'mulaag mi ig going home sa ilaha', 'dalaguete', '09123456789', 'april@gmail.com', 'Cash on Delivery'),
-(17, 'James Aldrin ', 'Baterna', 'Medellin', '09123456789', 'odiong@gmail.com', 'GCASH'),
-(18, 'James Aldrin ', 'mulaag mi ig going home sa ilaha', 'dalaguete', '09123456789', 'jurick@gmail.com', 'GCASH'),
-(19, 'James Aldrin ', 'mulaag mi ig going home sa ilaha', 'Medellin', '09123456789', 'jericbaternakho@gmail.com', 'GCASH'),
-(20, 'James Aldrin ', 'mulaag mi ig going home sa ilaha', 'dalaguete', '09123456789', 'jericbaternakho@gmail.com', 'GCASH');
 
+INSERT INTO `customers` (`id`, `name`, `lastname`, `location`, `contact`, `email`, `payment`) VALUES
+(1, 'April', 'Diez', 'dalaguete', '09123456789', 'april@gmail.com', 'Cash on Delivery'),
+(2, 'James', 'Odiong', 'dalaguete', '09123456789', 'jurick@gmail.com', 'Cash on Delivery'),
+(3, 'Jurick', 'Baybayanon', 'dalaguete', '09123456789', 'jericbaternakho@gmail.com', 'GCASH'),
+(4, 'Rhea', 'Amancio', 'dalaguete', '09123456789', 'april@gmail.com', 'GCASH'),
+(5, 'Ric Jee', 'Baterna', 'Medellin', '09123456789', 'jericbaternakho@gmail.com', 'GCASH');
 -- --------------------------------------------------------
 
 --
